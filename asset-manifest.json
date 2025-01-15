@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/wattwave/static/js/main.b9dca26b.js",
+    "main.js": "/wattwave/static/js/main.0fc6d975.js",
     "static/js/127.b1b36854.chunk.js": "/wattwave/static/js/127.b1b36854.chunk.js",
     "static/css/928.ca410931.chunk.css": "/wattwave/static/css/928.ca410931.chunk.css",
     "static/js/928.20a670d8.chunk.js": "/wattwave/static/js/928.20a670d8.chunk.js",
@@ -24,7 +24,7 @@
     "static/media/RoadCar.jpg": "/wattwave/static/media/RoadCar.f9129aa76f8ec5002ac6.jpg",
     "static/media/aboutImg.webp": "/wattwave/static/media/aboutImg.5de4ad9e3bde5642ae86.webp",
     "index.html": "/wattwave/index.html",
-    "main.b9dca26b.js.map": "/wattwave/static/js/main.b9dca26b.js.map",
+    "main.0fc6d975.js.map": "/wattwave/static/js/main.0fc6d975.js.map",
     "127.b1b36854.chunk.js.map": "/wattwave/static/js/127.b1b36854.chunk.js.map",
     "928.ca410931.chunk.css.map": "/wattwave/static/css/928.ca410931.chunk.css.map",
     "928.20a670d8.chunk.js.map": "/wattwave/static/js/928.20a670d8.chunk.js.map",
@@ -43,6 +43,6 @@
     "81.0e791e34.chunk.css.map": "/wattwave/static/css/81.0e791e34.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/main.b9dca26b.js"
+    "static/js/main.0fc6d975.js"
   ]
 }
