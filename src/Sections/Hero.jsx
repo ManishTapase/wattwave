@@ -13,7 +13,7 @@ const Hero = () => {
 
   const handleNavigation = (e, targetId) => {
     e.preventDefault();
-    const targetUrl = `/wattwave/home#${targetId}`;
+    const targetUrl = `/home#${targetId}`;
     navigate(targetUrl); // Navigate to the home page with hash
 
     const checkSection = () => {
