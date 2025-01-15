@@ -35,7 +35,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           {routes.map(({ path, component: Component }, index) => (
-            <Route key={index} path={path} element={<Component />} />
+            <Route
+              key={index}
+              path={`/wattwave/${path}`}
+              element={<Component />}
+            />
           ))}
         </Routes>
       </Suspense>
