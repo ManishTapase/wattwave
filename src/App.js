@@ -33,7 +33,7 @@ const App = () => {
     <ErrorBoundary>
       <Suspense fallback={<div></div>}>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="*" element={<LandingPage />} />
           {routes.map(({ path, component: Component }, index) => (
             <Route key={index} path={`${path}`} element={<Component />} />
           ))}
