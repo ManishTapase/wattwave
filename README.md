@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -72,3 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # wirelesssWeb
 >>>>>>> 6b4ce7245bdce3ae05ef5e1d54904da061190121
+=======
+# wattwave
+>>>>>>> 2dc9152f63de1277cb70d9ce769bc0617b4127cd
