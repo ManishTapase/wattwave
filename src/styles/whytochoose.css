@@ -1,0 +1,20 @@
+.mainitem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 80vw;
+  border: 2 solid rgb(147, 217, 181);
+  gap: 6;
+}
+
+.mainitem.open {
+  /* background-color: rgb(101, 173, 218); */
+  /* border: 2 solid rgb(147, 217, 181); */
+  height: auto;
+}
+
+.mainitem {
+  transition: height 3s;
+}
+/* w-full h-[max-content] border-2 border-green-500 flex flex-col md:flex-row justify-center items-center */

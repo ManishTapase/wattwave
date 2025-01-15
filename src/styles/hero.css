@@ -1,0 +1,34 @@
+#home {
+  /* background: linear-gradient(135deg, #08657e, #49b0a5, #f0f3bd); */
+  background: linear-gradient(135deg, #000428a7, #004e929f, #f0f3bd9b);
+  /* Extend the background size */
+  background-size: 300% 300%;
+  /* Animation for gradient movement */
+  /* width: 1000vw; */
+  /* transition: height 3s linear; */
+  animation: wave 3s infinite linear;
+}
+#homeSec {
+  /* background: linear-gradient(135deg, #08657e, #49b0a5, #f0f3bd); */
+  /* background: linear-gradient(135deg, #00042876, #004e9296, #f0f3bd8d); */
+  /* Extend the background size */
+  background-size: 100% 100%;
+  /* Animation for gradient movement */
+  /* width: 1000vw; */
+  animation: wave 3s 1 linear;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 40%;
+  }
+  100% {
+    background-position: 100% 40%;
+  }
+}
+
+/* .wattwaveText {
+  background: linear-gradient(135deg, #000428, #004e92);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */

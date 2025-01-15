@@ -1,0 +1,17 @@
+.queContainer {
+  display: flex;
+  flex-direction: column;
+  /* flex flex-col w-full h-[max-content] p-3 gap-3 */
+}
+
+.queContainer.open {
+  height: auto;
+}
+
+.queContainer.open {
+  transition: height 2s;
+}
+
+.queContainer {
+  transition: height 2s;
+}

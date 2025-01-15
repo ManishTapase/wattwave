@@ -1,0 +1,141 @@
+.footerSec {
+  position: relative;
+  margin-top: 8vh;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  .mainSpan {
+    position: relative;
+    color: white;
+    background-color: black;
+    width: 90%;
+    height: 100%;
+    border-radius: 30px 30px 0 0;
+    .midDiv {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .infoDiv {
+        position: relative;
+        left: 3em;
+        width: 50%;
+        h4 {
+          background-color: #b9ff66;
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+          width: fit-content;
+          padding: 2px;
+          border-radius: 6px;
+        }
+      }
+      .mailSub {
+        position: relative;
+        top: 20px;
+        right: 30px;
+        width: 50%;
+        height: 10em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(57, 53, 53, 0.577);
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        input {
+          width: 10em;
+          padding: 10px 20px 10px 20px;
+          background-color: transparent;
+          border: 1.6px solid white;
+          border-radius: 10px;
+          margin-right: 1em;
+        }
+        button {
+          width: 14em;
+          padding: 10px 20px 10px 20px;
+          background-color: #b9ff66;
+          color: #000000;
+          border: 0;
+          border-radius: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+    .copyright {
+      position: relative;
+      left: 2em;
+      width: 95%;
+      border-top: 1px solid white;
+      padding-top: 1.5em;
+      padding-bottom: 2em;
+      margin-top: 1.6em;
+    }
+  }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 900px) {
+  .footerSec {
+    flex-direction: column;
+    height: max-content;
+    .mainSpan {
+      width: 100%;
+
+      border-radius: 0;
+      .midDiv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+        padding-bottom: 8vh;
+        /* border-bottom: 1px solid white; */
+        .infoDiv {
+          left: 0;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 15px;
+          .Address {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+        .mailSub {
+          width: 80%;
+          height: 8em;
+          top: 0;
+          right: 0;
+          flex-direction: column;
+          justify-content: space-evenly;
+          input {
+            margin-right: 0;
+            width: 70%;
+          }
+          button {
+            width: 85%;
+          }
+        }
+      }
+      .copyright {
+        width: 95%;
+        left: 0.65em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        padding-top: 0;
+        margin-top: 0.5em;
+        border-top: 1px solid white;
+      }
+    }
+  }
+}
