@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.js": "/wattwave/static/js/main.fb0ca639.js",
-    "static/js/127.9df4cdd0.chunk.js": "/wattwave/static/js/127.9df4cdd0.chunk.js",
+    "main.js": "/wattwave/static/js/main.d2334a90.js",
+    "static/js/127.b8ccac96.chunk.js": "/wattwave/static/js/127.b8ccac96.chunk.js",
     "static/css/928.ca410931.chunk.css": "/wattwave/static/css/928.ca410931.chunk.css",
-    "static/js/928.f956e9da.chunk.js": "/wattwave/static/js/928.f956e9da.chunk.js",
+    "static/js/928.372579e7.chunk.js": "/wattwave/static/js/928.372579e7.chunk.js",
     "static/js/488.fd40211e.chunk.js": "/wattwave/static/js/488.fd40211e.chunk.js",
     "static/js/276.43bd60f9.chunk.js": "/wattwave/static/js/276.43bd60f9.chunk.js",
     "static/js/750.f98716d7.chunk.js": "/wattwave/static/js/750.f98716d7.chunk.js",
@@ -24,10 +24,10 @@
     "static/media/RoadCar.jpg": "/wattwave/static/media/RoadCar.f9129aa76f8ec5002ac6.jpg",
     "static/media/aboutImg.webp": "/wattwave/static/media/aboutImg.5de4ad9e3bde5642ae86.webp",
     "index.html": "/wattwave/index.html",
-    "main.fb0ca639.js.map": "/wattwave/static/js/main.fb0ca639.js.map",
-    "127.9df4cdd0.chunk.js.map": "/wattwave/static/js/127.9df4cdd0.chunk.js.map",
+    "main.d2334a90.js.map": "/wattwave/static/js/main.d2334a90.js.map",
+    "127.b8ccac96.chunk.js.map": "/wattwave/static/js/127.b8ccac96.chunk.js.map",
     "928.ca410931.chunk.css.map": "/wattwave/static/css/928.ca410931.chunk.css.map",
-    "928.f956e9da.chunk.js.map": "/wattwave/static/js/928.f956e9da.chunk.js.map",
+    "928.372579e7.chunk.js.map": "/wattwave/static/js/928.372579e7.chunk.js.map",
     "488.fd40211e.chunk.js.map": "/wattwave/static/js/488.fd40211e.chunk.js.map",
     "276.43bd60f9.chunk.js.map": "/wattwave/static/js/276.43bd60f9.chunk.js.map",
     "750.f98716d7.chunk.js.map": "/wattwave/static/js/750.f98716d7.chunk.js.map",
@@ -43,6 +43,6 @@
     "81.0e791e34.chunk.css.map": "/wattwave/static/css/81.0e791e34.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/main.fb0ca639.js"
+    "static/js/main.d2334a90.js"
   ]
 }
