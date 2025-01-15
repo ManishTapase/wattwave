@@ -4,25 +4,25 @@
       "id": 1,
       "title": "Efficiency",
       "description": "Our wireless charging solutions are designed to maximize efficiency, ensuring that your EV spends more time on the road and less time tethered to a charging station.",
-      "img": "/Assetss/car2.jpeg"
+      "img": "/wattwave/Assetss/car2.jpeg"
     },
     {
       "id": 2,
       "title": "Convenience",
       "description": "Say goodbye to the hassle of plugging and unplugging your vehicle. With Watt Wave, charging your EV is as simple as parking it over our charging pad.",
-      "img": "/Assetss/BMW-Wire.jpg"
+      "img": "/wattwave/Assetss/BMW-Wire.jpg"
     },
     {
       "id": 3,
       "title": "Versatility",
       "description": "Whether you're at home, at work, or on the go, our wireless chargers are designed to seamlessly integrate into your lifestyle, providing reliable power wherever you need it.",
-      "img": "/Assetss/car-1.webp"
+      "img": "/wattwave/Assetss/car-1.webp"
     },
     {
       "id": 4,
       "title": "Sustainability",
       "description": "By eliminating the need for traditional charging cables, Watt Wave is helping to reduce waste and minimize environmental impact, one charge at a time.",
-      "img": "/Assetss/parkCarEvPad.png"
+      "img": "/wattwave/Assetss/parkCarEvPad.png"
     }
   ],
   "products": [
@@ -30,19 +30,19 @@
       "id": 1,
       "title": "Home Charging Solutions",
       "description": "Transform your garage into a personal charging station with our sleek and efficient home charging pads.",
-      "img": "/Assetss/car-1.webp"
+      "img": "/wattwave/Assetss/car-1.webp"
     },
     {
       "id": 2,
       "title": "Public Charging Stations",
       "description": "From parking lots to city streets, our public charging stations provide convenient access to power for EV drivers",
-      "img": "/Assetss/station.jpg"
+      "img": "/wattwave/Assetss/station.jpg"
     },
     {
       "id": 3,
       "title": "Commercial Solutions",
       "description": "Streamline your fleet management operations with our customizable charging solutions for businesses and municipalities.",
-      "img": "/Assetss/truck.webp"
+      "img": "/wattwave/Assetss/truck.webp"
     }
   ],
   "benifits": [
@@ -50,19 +50,19 @@
       "id": 1,
       "title": "Safety",
       "description": "Our wireless charging technology eliminates the risk of electric shock and reduces wear and tear on charging connectors, ensuring a safer charging experience for both you and your vehicle.",
-      "img": "/Assetss/SafetyImg.jpg"
+      "img": "/wattwave/Assetss/SafetyImg.jpg"
     },
     {
       "id": 2,
       "title": "Reliability",
       "description": "With no physical connectors to degrade or malfunction, our wireless chargers provide a reliable and consistent charging experience, every time.",
-      "img": "/Assetss/ReliablityImg.jpg"
+      "img": "/wattwave/Assetss/ReliablityImg.jpg"
     },
     {
       "id": 3,
       "title": "Future-Proof",
       "description": "As the automotive industry continues to evolve, our wireless charging solutions are designed to adapt and grow with the latest advancements in electric vehicle technology.",
-      "img": "/Assetss/FutureImg.webp"
+      "img": "/wattwave/Assetss/FutureImg.webp"
     }
   ],
   "questions": [
