@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component {
 
 const routes = [
   // { path: "/", component: LandingPage },
-  { path: "/home", component: Main },
+  { path: "/wattwave/home", component: Main },
 ];
 
 const App = () => {
