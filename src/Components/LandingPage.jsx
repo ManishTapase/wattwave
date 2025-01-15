@@ -10,7 +10,8 @@ const LandingPage = () => {
     // Start fade out after 3 seconds and navigate back to previous page
     const timer = setTimeout(() => {
       setFadeOut(true);
-      const previousPage = sessionStorage.getItem("previousPage") || "/home";
+      const previousPage =
+        sessionStorage.getItem("previousPage") || "wattwave/home";
       setTimeout(() => {
         navigate(previousPage); // Redirect back to the previous page
       }, 1000); // Time for fade-out animation
