@@ -48,7 +48,7 @@ const WhyWattWave = () => {
         className=" w-[100vw] flex justify-center items-center m-0 md:padding pt-30"
         style={{
           height: "max-content",
-          background: "linear-gradient(135deg, #000428, #004e92,#f0f3bddd)",
+          background: "linear-gradient(135deg, #000428, #004e92)",
         }}
       >
         <div className="w-full flex justify-center flex-wrap">

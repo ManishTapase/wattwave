@@ -28,6 +28,12 @@ const HorizontalTextScroll = () => {
     );
   }, []);
 
+  var bg = {
+    background: "linear-gradient(200deg, #000428, #004e92)",
+    WebkitTextFillColor: "transparent",
+    WebkitBackgroundClip: "text",
+  };
+
   return (
     <div style={{ height: "max-content", padding: "20px" }}>
       <span
@@ -38,14 +44,14 @@ const HorizontalTextScroll = () => {
           fontSize: "10rem",
           whiteSpace: "nowrap", // Prevent wrapping
           position: "relative",
-          background: "#58a0df", // Light gray for visibility
           padding: "10px",
           width: "max-content",
-          WebkitTextFillColor: "transparent",
-          WebkitBackgroundClip: "text",
+          // background: "#58a0df", // Light gray for visibility
         }}
       >
-        Get Charged Up with Watt Wave!
+        <span style={bg}>Get Charged</span>⚡<span style={bg}>Up</span>
+        🔋
+        <span style={bg}>with Watt Wave!</span>
       </span>
     </div>
   );

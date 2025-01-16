@@ -22,10 +22,11 @@ const FAQ = () => {
     <section
       className="w-screen h-[max-content] flex flex-col justify-center items-center p-5"
       style={{
-        background: "linear-gradient(200deg, #000428, #004e92, #f0f3bddd)",
+        // #f0f3bddd
+        background: "linear-gradient(200deg, #000428, #004e92)",
       }}
     >
-      <h1 className="font-poppins text-white text-4xl pb-10 m-0 font-bold">
+      <h1 className="font-poppins text-white text-4xl pb-10 m-0 font-bold pt-10">
         FAQ
       </h1>
       <div className="flex flex-col w-[90vw] p-5">
@@ -42,7 +43,7 @@ const FAQ = () => {
                 } relative p-8 rounded-xl`}
                 style={{
                   background:
-                    "linear-gradient(135deg, rgba(8, 101, 126, 0.9), rgba(73, 176, 165, 0.8), #004e92)",
+                    "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)",
                 }}
               >
                 {/* Question ID */}

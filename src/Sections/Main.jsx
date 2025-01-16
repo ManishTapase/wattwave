@@ -66,12 +66,14 @@ const Main = () => {
       <section id="home">
         <Hero />
       </section>
+
+      <LazyLoadSection>
+        <section id="whytochoose">
+          <WhytoChoose />
+        </section>
+      </LazyLoadSection>
+
       <Suspense fallback={<div>Loading...</div>}>
-        <LazyLoadSection>
-          <section id="about">
-            <About />
-          </section>
-        </LazyLoadSection>
         <LazyLoadSection>
           <section id="whyWattWave">
             <WhyWattWave />
@@ -87,13 +89,11 @@ const Main = () => {
         <LazyLoadSection>
           <HorizontalTextScroll />
         </LazyLoadSection>
-
         <LazyLoadSection>
-          <section id="whytochoose">
-            <WhytoChoose />
+          <section id="about">
+            <About />
           </section>
         </LazyLoadSection>
-
         <LazyLoadSection>
           <section id="faq">
             <FAQ />

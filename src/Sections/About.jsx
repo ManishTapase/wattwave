@@ -44,7 +44,16 @@ const About = () => {
   // Function to split text into lines
   const splitLines = (text) => {
     return text.split("\n").map((line, index) => (
-      <span key={index} className="line block">
+      <span
+        key={index}
+        style={{
+          background: "linear-gradient(135deg,#004e92, #000428)",
+          // background: "#58a0df", // Light gray for visibility
+          WebkitTextFillColor: "transparent",
+          WebkitBackgroundClip: "text",
+        }}
+        className="line block"
+      >
         {line}
       </span>
     ));
@@ -54,19 +63,18 @@ const About = () => {
       id="about"
       className="relative flex justify-center items-center w-screen pt-10 bg-cover bg-center"
       style={{
+        position: "relative",
         backgroundImage: `url(${aboutBg})`,
       }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <h1 className="font-poppins text-4xl font-bold text-center text-[#458ec3]">
-          About
-        </h1>
+        <h1 className="font-poppins text-4xl font-bold text-center">About</h1>
 
         <div className="para flex flex-col justify-center items-center mt-4">
           <div className="md:h-[40vh] md:w-[70vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
             <p
               ref={textRef}
-              className="md:text-[#6bbaff]  text-[#55b0ff] font-poppins font-medium text-xl md:text-2xl leading-relaxed"
+              className="font-poppins font-medium text-xl md:text-2xl leading-relaxed"
             >
               {splitLines(`At Watt Wave, we're revolutionizing the way electric vehicles\n
                 (EVs) are charged. Gone are the days of tangled cords and\n
@@ -76,7 +84,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="relative top-10 h-[30vh] md:h-[70vh] md:w-[60vw] w-[70vw] rounded-lg flex justify-center items-center shadow-md shadow-slate-600">
+          <div className="relative top-10 h-[30vh] md:h-[70vh] md:w-[60vw] w-[70vw] rounded-lg flex justify-center items-center">
             <img
               src={car3}
               alt="Electric Car"

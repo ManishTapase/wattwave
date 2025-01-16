@@ -1,21 +1,56 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import datafile from "../json/data.json";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/whytochoose.css";
 
+gsap.registerPlugin(ScrollTrigger);
 const WhytoChoose = () => {
-  const [openItems, setOpenItems] = useState(new Set());
-
-  const toggleEvent = (id) => {
-    setOpenItems((prevSet) => {
-      const newSet = new Set(prevSet);
-      if (newSet.has(id)) {
-        newSet.delete(id);
-      } else {
-        newSet.add(id);
-      }
-      return newSet;
+  useEffect(() => {
+    const sections = gsap.utils.toArray(".cardDiv");
+    sections.forEach((section) => {
+      const product = section.querySelector(".card");
+      gsap.fromTo(
+        product,
+        {
+          y: "100%",
+          x: 0,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+          },
+        }
+      );
     });
-  };
+
+    // Cleanup ScrollTrigger instances on component unmount
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
+  // const [openItems, setOpenItems] = useState(new Set());
+
+  // const toggleEvent = (id) => {
+  //   setOpenItems((prevSet) => {
+  //     const newSet = new Set(prevSet);
+  //     if (newSet.has(id)) {
+  //       newSet.delete(id);
+  //     } else {
+  //       newSet.add(id);
+  //     }
+  //     return newSet;
+  //   });
+  // };
 
   return (
     <section
@@ -25,56 +60,63 @@ const WhytoChoose = () => {
       <h1 className="font-poppins text-4xl pb-10 m-0 font-bold">
         Why Choose Wireless?
       </h1>
-      <div className="w-[80vw] flex flex-col justify-center items-center gap-10 p-5">
+      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-2">
         {datafile.benifits.map((item) => {
-          const isOpen = openItems.has(item.id);
+          // const isOpen = openItems.has(item.id);
           return (
-            <div
-              key={item.id}
-              className={`mainitem flex flex-col ${
-                isOpen ? "open rounded-2xl" : ""
-              } mb-1`}
-              style={{
-                background: isOpen
-                  ? "linear-gradient(135deg, rgba(8, 101, 126, 0.9), rgba(73, 176, 165, 0.8), #004e92)"
-                  : "",
-              }}
-            >
-              {/* Title and Toggle Button */}
+            <div className="cardDiv">
               <div
-                className="relative flex flex-row items-center w-full rounded-sm p-2"
-                style={{
-                  background: !isOpen
-                    ? "linear-gradient(135deg, rgba(8, 101, 126, 0.9), rgba(73, 176, 165, 0.8), #004e92)"
-                    : "transparent",
-                }}
+                key={item.id}
+                // ${ // isOpen ? "open rounded-2xl" : "" }
+                className={`card flex flex-col
+              mb-1 w-[20em] h-[18em] rounded-md bg-slate-200 border-1 border-slate-400`}
+                style={
+                  {
+                    // background: isOpen
+                    //   ? "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)"
+                    //   : "",
+                  }
+                }
               >
-                <h1 className="font-poppins font-semibold text-blue-50 text-3xl">
-                  {item.title}
-                </h1>
-                <button
+                {/* Title and Toggle Button */}
+
+                <span
+                  className="relative items-center flex flex-row"
+                  // style={{
+                  //   background: !isOpen
+                  //     ? "linear-gradient(135deg, rgba(8, 101, 126, 0.9), rgba(73, 176, 165, 0.8), #004e92)"
+                  //     : "transparent",
+                  // }}
+                >
+                  <h1 className="font-poppins font-semibold text-cyan-500 text-2xl p-3">
+                    {item.title}
+                  </h1>
+                  <span>
+                    <img
+                      className="w-10 h-10"
+                      src={item.img}
+                      alt={item.title}
+                    />
+                  </span>
+                  {/* <button
                   className="absolute right-3 text-3xl text-blue-50 font-semibold cursor-pointer"
                   onClick={() => toggleEvent(item.id)}
                 >
                   {isOpen ? "-" : "+"}
-                </button>
-              </div>
+                </button> */}
+                </span>
 
-              {/* Description and Image (Visible only if open) */}
-              {isOpen && (
-                <div className="relative flex flex-col md:flex-row items-center mt-4">
-                  <div className="w-[80vw] md:w-[40vw]">
-                    <p className="font-poppins font-medium text-xl text-blue-50 p-8">
+                {/* Description and Image (Visible only if open) */}
+                {/* {isOpen && ( */}
+                <div className="relative flex flex-col md:flex-row items-center mt-2">
+                  <div className="w-[80vw] h-[max-content]">
+                    <p className="font-poppins font-medium text-lg text-blue-500 p-5">
                       {item.description}
                     </p>
                   </div>
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-[80vw] md:w-[30vw] h-[35vh] mb-5 md:rounded-lg"
-                  />
                 </div>
-              )}
+                {/* )} */}
+              </div>
             </div>
           );
         })}

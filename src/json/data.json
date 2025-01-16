@@ -50,19 +50,19 @@
       "id": 1,
       "title": "Safety",
       "description": "Our wireless charging technology eliminates the risk of electric shock and reduces wear and tear on charging connectors, ensuring a safer charging experience for both you and your vehicle.",
-      "img": "/wattwave/Assetss/SafetyImg.jpg"
+      "img": "/wattwave/Assetss/car-check.png"
     },
     {
       "id": 2,
       "title": "Reliability",
       "description": "With no physical connectors to degrade or malfunction, our wireless chargers provide a reliable and consistent charging experience, every time.",
-      "img": "/wattwave/Assetss/ReliablityImg.jpg"
+      "img": "/wattwave/Assetss/warranty.png"
     },
     {
       "id": 3,
       "title": "Future-Proof",
       "description": "As the automotive industry continues to evolve, our wireless charging solutions are designed to adapt and grow with the latest advancements in electric vehicle technology.",
-      "img": "/wattwave/Assetss/FutureImg.webp"
+      "img": "/wattwave/Assetss/future.png"
     }
   ],
   "questions": [

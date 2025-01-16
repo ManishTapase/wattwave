@@ -96,6 +96,7 @@ const Hero = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <h1
@@ -116,7 +117,7 @@ const Hero = () => {
             <h2
               ref={paraRef}
               // style={{ color: "#4d75e4" }}
-              className="font-poppins md:text-xl text-xl text-white font-medium"
+              className="font-poppins md:text-xl text-lg text-white font-medium"
             >
               {splitText("Powering the Future of Electric Vehicles!")}
             </h2>

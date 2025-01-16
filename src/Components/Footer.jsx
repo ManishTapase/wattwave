@@ -11,7 +11,7 @@ const Footer = () => {
         <span
           style={{
             borderRadius: "20px 20px 0px 0px",
-            background: "linear-gradient(-45deg, #000428, #004e92,#f0f3bddd)",
+            background: "linear-gradient(-45deg, #000428, #004e92)",
           }}
           className="relative  py-12 px-6 w-full md:w-[90%] h-full flex flex-col justify-center items-center"
         >

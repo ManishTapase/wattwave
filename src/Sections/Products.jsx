@@ -53,7 +53,7 @@ const Products = () => {
               className="product flex flex-col justify-start items-center h-[25em] w-[20em] rounded-lg p-4"
               style={{
                 background:
-                  "linear-gradient(135deg, rgba(8, 101, 126, 0.9), rgba(73, 176, 165, 0.8), #004e92)",
+                  "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)",
               }}
             >
               <h3 className="font-semibold text-white text-xl">{item.title}</h3>
