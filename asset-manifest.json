@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/wattwave/static/js/main.9807851a.js",
+    "main.js": "/wattwave/static/js/main.e67c08de.js",
     "static/js/127.9df4cdd0.chunk.js": "/wattwave/static/js/127.9df4cdd0.chunk.js",
     "static/css/431.c6832cae.chunk.css": "/wattwave/static/css/431.c6832cae.chunk.css",
     "static/js/431.8af20db4.chunk.js": "/wattwave/static/js/431.8af20db4.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/883.19795dad.chunk.js": "/wattwave/static/js/883.19795dad.chunk.js",
     "static/js/240.2c21e089.chunk.js": "/wattwave/static/js/240.2c21e089.chunk.js",
     "static/css/686.003652b4.chunk.css": "/wattwave/static/css/686.003652b4.chunk.css",
-    "static/js/686.e6559f9a.chunk.js": "/wattwave/static/js/686.e6559f9a.chunk.js",
+    "static/js/686.2198a001.chunk.js": "/wattwave/static/js/686.2198a001.chunk.js",
     "static/css/5.b4eb7205.chunk.css": "/wattwave/static/css/5.b4eb7205.chunk.css",
     "static/js/5.97836e39.chunk.js": "/wattwave/static/js/5.97836e39.chunk.js",
     "static/js/924.e1964638.chunk.js": "/wattwave/static/js/924.e1964638.chunk.js",
@@ -23,7 +23,7 @@
     "static/media/RoadCar.jpg": "/wattwave/static/media/RoadCar.f9129aa76f8ec5002ac6.jpg",
     "static/media/aboutImg.webp": "/wattwave/static/media/aboutImg.5de4ad9e3bde5642ae86.webp",
     "index.html": "/wattwave/index.html",
-    "main.9807851a.js.map": "/wattwave/static/js/main.9807851a.js.map",
+    "main.e67c08de.js.map": "/wattwave/static/js/main.e67c08de.js.map",
     "127.9df4cdd0.chunk.js.map": "/wattwave/static/js/127.9df4cdd0.chunk.js.map",
     "431.c6832cae.chunk.css.map": "/wattwave/static/css/431.c6832cae.chunk.css.map",
     "431.8af20db4.chunk.js.map": "/wattwave/static/js/431.8af20db4.chunk.js.map",
@@ -33,7 +33,7 @@
     "883.19795dad.chunk.js.map": "/wattwave/static/js/883.19795dad.chunk.js.map",
     "240.2c21e089.chunk.js.map": "/wattwave/static/js/240.2c21e089.chunk.js.map",
     "686.003652b4.chunk.css.map": "/wattwave/static/css/686.003652b4.chunk.css.map",
-    "686.e6559f9a.chunk.js.map": "/wattwave/static/js/686.e6559f9a.chunk.js.map",
+    "686.2198a001.chunk.js.map": "/wattwave/static/js/686.2198a001.chunk.js.map",
     "5.b4eb7205.chunk.css.map": "/wattwave/static/css/5.b4eb7205.chunk.css.map",
     "5.97836e39.chunk.js.map": "/wattwave/static/js/5.97836e39.chunk.js.map",
     "924.e1964638.chunk.js.map": "/wattwave/static/js/924.e1964638.chunk.js.map",
@@ -42,6 +42,6 @@
     "790.fad7a62e.chunk.css.map": "/wattwave/static/css/790.fad7a62e.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/main.9807851a.js"
+    "static/js/main.e67c08de.js"
   ]
 }
