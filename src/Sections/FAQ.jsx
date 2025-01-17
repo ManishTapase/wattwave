@@ -1,10 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import datafile from "../json/data.json";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/faq.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+gsap.registerPlugin(ScrollTrigger);
 
 const FAQ = () => {
   const [openQuestions, setOpenQuestions] = useState(new Set());
+
+  useEffect(() => {
+    gsap.utils.toArray(".faqDiv").forEach((section) => {
+      const faq = section.querySelector(".faq");
+      gsap.fromTo(
+        faq,
+        {
+          y: "100%",
+          x: 0,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+          },
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   const toggleEvent = (id) => {
     setOpenQuestions((prevSet) => {
@@ -21,12 +54,14 @@ const FAQ = () => {
   return (
     <section
       className="w-screen h-[max-content] flex flex-col justify-center items-center p-5"
-      style={{
-        // #f0f3bddd
-        background: "linear-gradient(200deg, #000428, #004e92)",
-      }}
+      style={
+        {
+          // #f0f3bddd
+          // background: "linear-gradient(200deg, #000428, #004e92)",
+        }
+      }
     >
-      <h1 className="font-poppins text-white text-4xl pb-10 m-0 font-bold pt-10">
+      <h1 className="font-poppins text-blue-500 text-4xl pb-10 m-0 font-bold pt-10">
         FAQ
       </h1>
       <div className="flex flex-col w-[90vw] p-5">
@@ -35,10 +70,12 @@ const FAQ = () => {
           return (
             <div
               key={item.id}
-              className={`queContainer p-3 gap-5 ${isOpen ? "open" : ""}`}
+              className={`faqDiv queContainer p-3 gap-5 ${
+                isOpen ? "open" : ""
+              }`}
             >
               <div
-                className={`flex ${
+                className={`faq flex ${
                   isOpen ? "flex-col" : "flex-row"
                 } relative p-8 rounded-xl`}
                 style={{

@@ -34,7 +34,13 @@ const Navigation = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-300">
+    <header
+      style={{
+        position: "-webkit-sticky",
+        zIndex: 1000,
+      }}
+      className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-300"
+    >
       <nav className="relative flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <a href="/">

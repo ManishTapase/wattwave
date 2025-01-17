@@ -30,9 +30,10 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        roboto: ["Roboto", "sans-serif"],
+        // roboto: ["Roboto", "sans-serif"],
         inter: ["Inter", "sans-serif"],
-        grotesk: ["Space Grotesk", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
       backgroundImage: {
         // "custom-gradient": "linear-gradient(135deg, #054d5b, #3e8c85, #c8e3ab)",

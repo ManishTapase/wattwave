@@ -9,9 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   const textRef = useRef(null);
   const gsapContext = useRef();
-
+  // const carRef = useRef(null);
   useEffect(() => {
     if (!textRef.current) return;
+
+    // const car = carRef.current.querySelector(".car");
 
     // Select all line containers
     // const lines = textRef.current.querySelectorAll(".line");
@@ -38,7 +40,27 @@ const About = () => {
       );
     });
 
-    return () => gsapContext.current.revert();
+    // gsap.fromTo(
+    //   car,
+    //   { y: "100%", x: 0, opacity: 0 },
+    //   {
+    //     y: 0,
+    //     x: 0,
+    //     opacity: 1,
+    //     duration: 2,
+    //     scrollTrigger: {
+    //       trigger: carRef.current,
+    //       start: "top 70%",
+    //       end: "top 40%",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
+
+    return () => {
+      gsapContext.current.revert();
+      // carRef.current.revert();
+    };
   }, []);
 
   // Function to split text into lines
@@ -46,12 +68,12 @@ const About = () => {
     return text.split("\n").map((line, index) => (
       <span
         key={index}
-        style={{
-          background: "linear-gradient(135deg,#004e92, #000428)",
-          // background: "#58a0df", // Light gray for visibility
-          WebkitTextFillColor: "transparent",
-          WebkitBackgroundClip: "text",
-        }}
+        // style={{
+        //   background: "linear-gradient(135deg,#004e92, #000428)",
+        //   // background: "#58a0df", // Light gray for visibility
+        //   WebkitTextFillColor: "transparent",
+        //   WebkitBackgroundClip: "text",
+        // }}
         className="line block"
       >
         {line}
@@ -64,17 +86,19 @@ const About = () => {
       className="relative flex justify-center items-center w-screen pt-10 bg-cover bg-center"
       style={{
         position: "relative",
-        backgroundImage: `url(${aboutBg})`,
+        // backgroundImage: `url(${aboutBg})`,
       }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <h1 className="font-poppins text-4xl font-bold text-center">About</h1>
+        <h1 className="font-poppins text-4xl text-blue-500 font-bold text-center">
+          About
+        </h1>
 
         <div className="para flex flex-col justify-center items-center mt-4">
           <div className="md:h-[40vh] md:w-[70vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
             <p
               ref={textRef}
-              className="font-poppins font-medium text-xl md:text-2xl leading-relaxed"
+              className="font-poppins text-sky-600 font-medium text-xl md:text-2xl leading-relaxed"
             >
               {splitLines(`At Watt Wave, we're revolutionizing the way electric vehicles\n
                 (EVs) are charged. Gone are the days of tangled cords and\n
@@ -84,13 +108,16 @@ const About = () => {
             </p>
           </div>
 
-          <div className="relative top-10 h-[30vh] md:h-[70vh] md:w-[60vw] w-[70vw] rounded-lg flex justify-center items-center">
+          {/* <div
+            ref={carRef}
+            className="cardiv relative top-10 h-[30vh] md:h-[60vh] md:w-[60vw] w-[70vw] rounded-lg flex justify-center items-center"
+          >
             <img
               src={car3}
               alt="Electric Car"
-              className="h-[30vh] md:h-[45vh] md:w-[50vw] w-[70vw] rounded-lg object-cover"
+              className="car h-[30vh] md:h-[45vh] md:w-[50vw] w-[70vw] rounded-lg object-cover shadow-sm shadow-slate-400"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

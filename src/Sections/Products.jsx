@@ -40,7 +40,7 @@ const Products = () => {
 
   return (
     <section className="flex flex-col items-center h-auto w-full px-4 py-8">
-      <h1 className="font-poppins text-4xl pb-10 font-bold text-center">
+      <h1 className="font-poppins text-4xl text-blue-500 pb-10 font-bold text-center">
         Our Products
       </h1>
       <div className="flex flex-wrap justify-center items-center gap-5 w-full">

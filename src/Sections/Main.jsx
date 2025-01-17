@@ -61,7 +61,15 @@ const Main = () => {
 
   return (
     <main style={{ overflowX: "hidden" }}>
-      <Navigation />
+      <section
+        style={{
+          position: "sticky",
+          zIndex: 10,
+          top: 0,
+        }}
+      >
+        <Navigation />
+      </section>
       {/* Direct rendering of Hero for instant load */}
       <section id="home">
         <Hero />

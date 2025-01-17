@@ -57,7 +57,7 @@ const WhytoChoose = () => {
       className="w-screen flex flex-col justify-center items-center padding"
       style={{ height: "max-content" }}
     >
-      <h1 className="font-poppins text-4xl pb-10 m-0 font-bold">
+      <h1 className="font-poppins text-4xl text-blue-500 pb-10 m-0 font-bold">
         Why Choose Wireless?
       </h1>
       <div className="w-full flex flex-col md:flex-row justify-center items-center gap-2">
