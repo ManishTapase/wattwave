@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -64,9 +64,9 @@ const WhytoChoose = () => {
         {datafile.benifits.map((item) => {
           // const isOpen = openItems.has(item.id);
           return (
-            <div className="cardDiv">
+            <div className="cardDiv" key={`${item.id}`}>
               <div
-                key={item.id}
+                // key={`${item.id}`}
                 // ${ // isOpen ? "open rounded-2xl" : "" }
                 className={`card flex flex-col
               mb-1 w-[20em] h-[18em] rounded-md bg-slate-200 border-1 border-slate-400`}
