@@ -57,7 +57,7 @@ const WhytoChoose = () => {
       className="w-screen flex flex-col justify-center items-center padding"
       style={{ height: "max-content" }}
     >
-      <h1 className="font-poppins text-4xl text-blue-500 pb-10 m-0 font-bold">
+      <h1 className="heading font-poppins text-4xl pb-10 m-0 font-bold">
         Why Choose Wireless?
       </h1>
       <div className="w-full flex flex-col md:flex-row justify-center items-center gap-2">
@@ -69,7 +69,7 @@ const WhytoChoose = () => {
                 // key={`${item.id}`}
                 // ${ // isOpen ? "open rounded-2xl" : "" }
                 className={`card flex flex-col
-              mb-1 w-[20em] h-[18em] rounded-md bg-slate-200 border-1 border-slate-400`}
+              mb-1 w-[20em] h-[18em] rounded-md bg-slate-100 shadow-sm shadow-slate-300 border-2 border-slate-300`}
                 style={
                   {
                     // background: isOpen
@@ -88,7 +88,7 @@ const WhytoChoose = () => {
                   //     : "transparent",
                   // }}
                 >
-                  <h1 className="font-poppins font-semibold text-cyan-500 text-2xl p-3">
+                  <h1 className="font-poppins font-semibold text-[#1E90FF] text-2xl p-3">
                     {item.title}
                   </h1>
                   <span>
@@ -110,7 +110,7 @@ const WhytoChoose = () => {
                 {/* {isOpen && ( */}
                 <div className="relative flex flex-col md:flex-row items-center mt-2">
                   <div className="w-[80vw] h-[max-content]">
-                    <p className="font-poppins font-medium text-lg text-blue-500 p-5">
+                    <p className="font-poppins font-medium text-lg text-[#696969] p-5">
                       {item.description}
                     </p>
                   </div>

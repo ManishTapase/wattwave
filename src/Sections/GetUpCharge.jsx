@@ -29,7 +29,7 @@ const HorizontalTextScroll = () => {
   }, []);
 
   var bg = {
-    background: "linear-gradient(200deg, #000428, #004e92)",
+    background: "#4169E1",
     WebkitTextFillColor: "transparent",
     WebkitBackgroundClip: "text",
   };

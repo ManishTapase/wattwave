@@ -52,7 +52,7 @@ const WhyWattWave = () => {
         }}
       >
         <div className="w-full flex justify-center items-center flex-wrap">
-          <h1 className="flex content-center font-poppins text-4xl text-blue-500 md:pt-0 pt-20 pb-10 ml-10 font-bold  ">
+          <h1 className="heading flex content-center font-poppins text-4xl text-blue-500 md:pt-0 pt-20 pb-10 ml-10 font-bold  ">
             Why Watt Wave?
           </h1>
           <section className="flex flex-col gap-8">
@@ -66,13 +66,13 @@ const WhyWattWave = () => {
                 } h-[max-content] md:w-[90vw] w-full gap-6 justify-center items-center mb-5`}
               >
                 <div
-                  className={`description rounded-xl shadow-sm shadow-gray-500 h-fit md:h-[40vh] w-[85vw] md:w-[40vw] flex flex-col justify-start items-center`}
+                  className={`description rounded-xl shadow-md bg-slate-200 shadow-gray-300 h-[13em] md:h-[40vh] w-[85vw] md:w-[40vw] flex flex-col justify-start items-center`}
                   style={{ padding: "15px" }}
                 >
-                  <h3 className="font-poppins text-3xl font-semibold text-[#58a0df]">
+                  <h3 className="font-poppins font-semibold text-[#1E90FF] text-xl">
                     {item.title}
                   </h3>
-                  <p className="font-poppins text-xl font-medium  text-blue-700">
+                  <p className="font-poppins font-medium text-lg text-[#696969] p-5">
                     {item.description}
                   </p>
                 </div>

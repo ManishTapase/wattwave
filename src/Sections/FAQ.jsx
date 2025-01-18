@@ -61,7 +61,7 @@ const FAQ = () => {
         }
       }
     >
-      <h1 className="font-poppins text-blue-500 text-4xl pb-10 m-0 font-bold pt-10">
+      <h1 className="heading font-poppins text-4xl pb-10 m-0 font-bold pt-10">
         FAQ
       </h1>
       <div className="flex flex-col w-[90vw] p-5">

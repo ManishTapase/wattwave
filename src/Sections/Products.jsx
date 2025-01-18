@@ -40,7 +40,7 @@ const Products = () => {
 
   return (
     <section className="flex flex-col items-center h-auto w-full px-4 py-8">
-      <h1 className="font-poppins text-4xl text-blue-500 pb-10 font-bold text-center">
+      <h1 className="heading font-poppins text-4xl pb-10 font-bold text-center">
         Our Products
       </h1>
       <div className="flex flex-wrap justify-center items-center gap-5 w-full">
@@ -50,19 +50,21 @@ const Products = () => {
             className="productDiv flex justify-center items-center"
           >
             <div
-              className="product flex flex-col justify-start items-center h-[25em] w-[20em] rounded-lg p-4"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)",
-              }}
+              className="product flex flex-col bg-slate-200 justify-start items-center h-[25em] w-[20em] rounded-lg p-4"
+              // style={{
+              //   background:
+              //     "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)",
+              // }}
             >
-              <h3 className="font-semibold text-white text-xl">{item.title}</h3>
+              <h3 className="font-poppins font-semibold text-[#1E90FF] text-xl">
+                {item.title}
+              </h3>
               <img
                 src={item.img}
                 alt={item.title}
                 className="h-[12em] w-[16em] object-cover rounded-md mt-3"
               />
-              <p className="p-4 font-medium text-blue-100 text-center">
+              <p className="p-4 font-poppins font-medium text-[#696969]">
                 {item.description}
               </p>
             </div>

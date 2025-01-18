@@ -90,15 +90,15 @@ const About = () => {
       }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <h1 className="font-poppins text-4xl text-blue-500 font-bold text-center">
+        <h1 className="heading font-poppins text-4xl font-bold text-center">
           About
         </h1>
 
         <div className="para flex flex-col justify-center items-center mt-4">
-          <div className="md:h-[40vh] md:w-[70vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
+          <div className="md:h-[40vh] md:w-[80vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
             <p
               ref={textRef}
-              className="font-poppins text-sky-600 font-medium text-xl md:text-2xl leading-relaxed"
+              className="font-poppins text-[#1E90FF] font-medium text-xl md:text-[25px] leading-relaxed"
             >
               {splitLines(`At Watt Wave, we're revolutionizing the way electric vehicles\n
                 (EVs) are charged. Gone are the days of tangled cords and\n
