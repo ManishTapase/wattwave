@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/wattwave/static/js/main.85e85744.js",
+    "main.js": "/wattwave/static/js/main.2508c639.js",
     "static/js/606.2c1baafd.chunk.js": "/wattwave/static/js/606.2c1baafd.chunk.js",
     "static/css/963.feb4ba36.chunk.css": "/wattwave/static/css/963.feb4ba36.chunk.css",
     "static/js/963.726ab0f8.chunk.js": "/wattwave/static/js/963.726ab0f8.chunk.js",
     "static/js/685.68daba6f.chunk.js": "/wattwave/static/js/685.68daba6f.chunk.js",
-    "static/js/854.8cdabb46.chunk.js": "/wattwave/static/js/854.8cdabb46.chunk.js",
-    "static/js/19.f27f61ae.chunk.js": "/wattwave/static/js/19.f27f61ae.chunk.js",
-    "static/js/300.ff152271.chunk.js": "/wattwave/static/js/300.ff152271.chunk.js",
-    "static/js/893.bcf781f5.chunk.js": "/wattwave/static/js/893.bcf781f5.chunk.js",
+    "static/js/854.5bc6f12d.chunk.js": "/wattwave/static/js/854.5bc6f12d.chunk.js",
+    "static/js/19.21ea88fd.chunk.js": "/wattwave/static/js/19.21ea88fd.chunk.js",
+    "static/js/300.41467f88.chunk.js": "/wattwave/static/js/300.41467f88.chunk.js",
+    "static/js/893.ed323cbe.chunk.js": "/wattwave/static/js/893.ed323cbe.chunk.js",
     "static/css/316.c9c71c2f.chunk.css": "/wattwave/static/css/316.c9c71c2f.chunk.css",
-    "static/js/316.f6852251.chunk.js": "/wattwave/static/js/316.f6852251.chunk.js",
+    "static/js/316.de2a9872.chunk.js": "/wattwave/static/js/316.de2a9872.chunk.js",
     "static/css/463.9b530cd6.chunk.css": "/wattwave/static/css/463.9b530cd6.chunk.css",
-    "static/js/463.99b7c818.chunk.js": "/wattwave/static/js/463.99b7c818.chunk.js",
+    "static/js/463.6c7ff39e.chunk.js": "/wattwave/static/js/463.6c7ff39e.chunk.js",
     "static/js/845.6e5b7181.chunk.js": "/wattwave/static/js/845.6e5b7181.chunk.js",
     "static/js/131.0c71965a.chunk.js": "/wattwave/static/js/131.0c71965a.chunk.js",
     "static/js/937.2df35e06.chunk.js": "/wattwave/static/js/937.2df35e06.chunk.js",
-    "static/css/88.b65120e1.chunk.css": "/wattwave/static/css/88.b65120e1.chunk.css",
+    "static/css/88.d3179699.chunk.css": "/wattwave/static/css/88.d3179699.chunk.css",
     "static/media/globalCar.png": "/wattwave/static/media/globalCar.30159e1201a05ec524a4.png",
     "static/media/aboutBg.png": "/wattwave/static/media/aboutBg.357a5676d831f8812a8d.png",
     "static/media/logo.png": "/wattwave/static/media/logo.9280c271da26444a4d4e.png",
@@ -25,6 +25,6 @@
     "index.html": "/wattwave/index.html"
   },
   "entrypoints": [
-    "static/js/main.85e85744.js"
+    "static/js/main.2508c639.js"
   ]
 }
