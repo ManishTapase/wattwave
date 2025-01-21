@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
+import "./styles/font.css";
 const LandingPage = React.lazy(() => import("./Components/LandingPage"));
 const Main = React.lazy(() => import("./Sections/Main"));
 class ErrorBoundary extends React.Component {

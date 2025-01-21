@@ -87,7 +87,7 @@ const Hero = () => {
         }}
       >
         <div
-          id="home"
+          // id="home"
           className="flex items-center justify-center w-screen h-[60vh] md:h-screen"
         >
           <span
@@ -107,7 +107,7 @@ const Hero = () => {
                 // whiteSpace: "nowrap",
                 color: "white",
               }}
-              className="font-poppins md:text-6xl text-4xl justify-around m-0 p-0 font-bold"
+              className="relative left-3 md:left-0 font-poppins md:text-6xl text-4xl justify-around m-0 p-0 font-bold"
             >
               Welcome to{" "}
               <span className="bg-custom-gradient1 bg-clip-text text-[#58a0df]">
@@ -117,7 +117,7 @@ const Hero = () => {
             <h2
               ref={paraRef}
               // style={{ color: "#4d75e4" }}
-              className="font-poppins md:text-xl text-lg text-white font-medium"
+              className="relative right-4 md:right-0 font-poppins md:text-xl text-lg text-white font-medium"
             >
               {splitText("Powering the Future of Electric Vehicles!")}
             </h2>

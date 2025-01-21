@@ -4,7 +4,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../Assets/logo.png";
 import Arrow from "../Assets/arrow.png";
 import "../styles/footer.css";
+import { useNavigate } from "react-router";
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (e, targetId) => {
+    e.preventDefault();
+    const targetUrl = `/home#${targetId}`;
+    navigate(targetUrl); // Navigate to the home page with hash
+
+    const checkSection = () => {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      } else {
+        // Retry after a small delay if the section hasn't loaded yet
+        setTimeout(checkSection, 100);
+      }
+    };
+
+    checkSection();
+  };
   return (
     <>
       <section className="relative w-[100vw] h-[70vh] md:h-[70%] flex justify-center flex-col md:flex-row items-center">
@@ -16,13 +39,14 @@ const Footer = () => {
           className="relative  py-12 px-6 w-full md:w-[90%] h-full flex flex-col justify-center items-center"
         >
           <nav className="flex flex-col md:flex-row md:w-[80%] w-[70%] justify-start items-center max-container pb-6">
-            <a href="/">
+            <a href="/home" onClick={(e) => handleNavigation(e, "home")}>
               <img className="h-10 w-15" src={logo} alt="" />
             </a>
             <ul className="flex flex-col md:flex-row justify-center items-center gap-2 pl-8 pr-8 md:gap-16">
               <li>
                 <a
-                  href="/"
+                  href="/home"
+                  onClick={(e) => handleNavigation(e, "home")}
                   className="font-poppins md:font-medium leading-normal text-lg text-blue-200  "
                 >
                   Home
@@ -30,7 +54,8 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/home#about"
+                  onClick={(e) => handleNavigation(e, "about")}
                   className="font-poppins md:font-medium leading-normal text-lg text-blue-200  "
                 >
                   About
@@ -38,20 +63,22 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/home#products"
+                  onClick={(e) => handleNavigation(e, "products")}
                   className="font-poppins md:font-medium leading-normal text-lg text-blue-200  "
                 >
                   products
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
-                  href="/"
+                  href="/home#footer"
+                  onClick={(e) => handleNavigation(e, "footer")}
                   className="font-poppins md:font-medium leading-normal text-lg text-blue-200  "
                 >
                   Reach us
                 </a>
-              </li>
+              </li> */}
             </ul>
             <div>
               <span className="flex flex-row gap-6 text-2xl absolute bottom-14 left-[29%] md:relative md:bottom-0 p-1 text-blue-300">

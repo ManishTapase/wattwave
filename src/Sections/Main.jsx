@@ -3,6 +3,8 @@ import Navigation from "../Components/Navigation";
 import Hero from "./Hero";
 import Footer from "../Components/Footer";
 import "../index.css";
+import Loader from "../Components/loader2";
+// import "../styles/font.css";
 
 // LazyLoadSection Component
 const LazyLoadSection = ({ children, threshold = 0.1 }) => {
@@ -34,9 +36,9 @@ const LazyLoadSection = ({ children, threshold = 0.1 }) => {
     <section
       ref={sectionRef}
       style={{
-        minHeight: "max-content" /* default height */,
+        minHeight: "10vh" /* default height */,
         opacity: isVisible ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
+        transition: "opacity 2s ease-in-out",
       }}
     >
       {isVisible ? children : null}
@@ -60,7 +62,7 @@ const Main = () => {
   const MissionVision = React.lazy(() => import("./Mission"));
 
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <>
       <section
         style={{
           position: "sticky",
@@ -70,52 +72,65 @@ const Main = () => {
       >
         <Navigation />
       </section>
-      {/* Direct rendering of Hero for instant load */}
-      <section id="home">
-        <Hero />
-      </section>
-
-      <LazyLoadSection>
-        <section id="whytochoose">
-          <WhytoChoose />
+      {/* <span
+        style={{
+          position: "sticky",
+          zIndex: 30,
+          top: "90vh",
+          left: "-1vw",
+        }}
+        className="flex justify-center items-center z-100 border-2 border-blue-600 bg-white h-10 w-10 rounded-[50%]"
+      >
+        <h3>UP</h3>
+      </span> */}
+      <main style={{ overflowX: "hidden" }}>
+        {/* Direct rendering of Hero for instant load */}
+        <section id="home">
+          <Hero />
         </section>
-      </LazyLoadSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
         <LazyLoadSection>
-          <section id="whyWattWave">
-            <WhyWattWave />
+          <section id="whytochoose">
+            <WhytoChoose />
           </section>
         </LazyLoadSection>
 
-        <LazyLoadSection>
-          <section id="products">
-            <Products />
-          </section>
-        </LazyLoadSection>
+        <Suspense fallback={<Loader />}>
+          <LazyLoadSection>
+            <section id="whyWattWave">
+              <WhyWattWave />
+            </section>
+          </LazyLoadSection>
 
-        <LazyLoadSection>
-          <HorizontalTextScroll />
-        </LazyLoadSection>
-        <LazyLoadSection>
-          <section id="about">
-            <About />
-          </section>
-        </LazyLoadSection>
-        <LazyLoadSection>
-          <section id="faq">
-            <FAQ />
-          </section>
-        </LazyLoadSection>
+          <LazyLoadSection>
+            <section id="products" className="pt-10">
+              <Products />
+            </section>
+          </LazyLoadSection>
 
-        <LazyLoadSection>
-          <MissionVision />
-        </LazyLoadSection>
-      </Suspense>
-      <section id="footer">
-        <Footer />
-      </section>
-    </main>
+          <LazyLoadSection>
+            <HorizontalTextScroll />
+          </LazyLoadSection>
+          <LazyLoadSection>
+            <section id="about" className="pt-10">
+              <About />
+            </section>
+          </LazyLoadSection>
+          <LazyLoadSection>
+            <section id="faq" className="pt-10">
+              <FAQ />
+            </section>
+          </LazyLoadSection>
+
+          <LazyLoadSection>
+            <MissionVision />
+          </LazyLoadSection>
+        </Suspense>
+        <section id="footer">
+          <Footer />
+        </section>
+      </main>
+    </>
   );
 };
 

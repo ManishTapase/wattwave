@@ -37,7 +37,7 @@ const Navigation = () => {
     <header
       style={{
         position: "-webkit-sticky",
-        zIndex: 1000,
+        zIndex: 10,
       }}
       className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-300"
     >
