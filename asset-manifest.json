@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.js": "/wattwave/static/js/main.2508c639.js",
-    "static/js/606.2c1baafd.chunk.js": "/wattwave/static/js/606.2c1baafd.chunk.js",
-    "static/css/963.feb4ba36.chunk.css": "/wattwave/static/css/963.feb4ba36.chunk.css",
-    "static/js/963.726ab0f8.chunk.js": "/wattwave/static/js/963.726ab0f8.chunk.js",
+    "main.css": "/wattwave/static/css/main.e0d38ddb.css",
+    "main.js": "/wattwave/static/js/main.4292100b.js",
+    "static/js/606.6ef73f51.chunk.js": "/wattwave/static/js/606.6ef73f51.chunk.js",
+    "static/css/987.7f530c8c.chunk.css": "/wattwave/static/css/987.7f530c8c.chunk.css",
+    "static/js/987.d7614db2.chunk.js": "/wattwave/static/js/987.d7614db2.chunk.js",
     "static/js/685.68daba6f.chunk.js": "/wattwave/static/js/685.68daba6f.chunk.js",
     "static/js/854.5bc6f12d.chunk.js": "/wattwave/static/js/854.5bc6f12d.chunk.js",
     "static/js/19.21ea88fd.chunk.js": "/wattwave/static/js/19.21ea88fd.chunk.js",
@@ -15,16 +16,19 @@
     "static/js/463.6c7ff39e.chunk.js": "/wattwave/static/js/463.6c7ff39e.chunk.js",
     "static/js/845.6e5b7181.chunk.js": "/wattwave/static/js/845.6e5b7181.chunk.js",
     "static/js/131.0c71965a.chunk.js": "/wattwave/static/js/131.0c71965a.chunk.js",
-    "static/js/937.2df35e06.chunk.js": "/wattwave/static/js/937.2df35e06.chunk.js",
-    "static/css/88.d3179699.chunk.css": "/wattwave/static/css/88.d3179699.chunk.css",
+    "static/js/903.48b499ab.chunk.js": "/wattwave/static/js/903.48b499ab.chunk.js",
+    "static/js/959.c4408f5d.chunk.js": "/wattwave/static/js/959.c4408f5d.chunk.js",
+    "static/css/88.9bba24d4.chunk.css": "/wattwave/static/css/88.9bba24d4.chunk.css",
     "static/media/globalCar.png": "/wattwave/static/media/globalCar.30159e1201a05ec524a4.png",
     "static/media/aboutBg.png": "/wattwave/static/media/aboutBg.357a5676d831f8812a8d.png",
     "static/media/logo.png": "/wattwave/static/media/logo.9280c271da26444a4d4e.png",
     "static/media/RoadCar.jpg": "/wattwave/static/media/RoadCar.f9129aa76f8ec5002ac6.jpg",
     "static/media/aboutImg.webp": "/wattwave/static/media/aboutImg.5de4ad9e3bde5642ae86.webp",
+    "static/media/Earth-Orbiter-Expanded.ttf.woff": "/wattwave/static/media/Earth-Orbiter-Expanded.ttf.b4f9ca509c05b4ba5771.woff",
     "index.html": "/wattwave/index.html"
   },
   "entrypoints": [
-    "static/js/main.2508c639.js"
+    "static/css/main.e0d38ddb.css",
+    "static/js/main.4292100b.js"
   ]
 }
