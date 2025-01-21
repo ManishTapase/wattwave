@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
   /* font-family: "Space Grotesk";
    */
-  font-family: "CustomFont" sans-serif;
+  /* font-family: "CustomFont" sans-serif; */
 }
 
 @layer components {
