@@ -3,7 +3,7 @@ import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/whytochoose.css";
-
+import VideoUrl from "../Assets/wattwave.mp4";
 gsap.registerPlugin(ScrollTrigger);
 const WhytoChoose = () => {
   useEffect(() => {
@@ -57,10 +57,22 @@ const WhytoChoose = () => {
       className="w-screen flex flex-col justify-center items-center padding"
       style={{ height: "max-content" }}
     >
+      <div className="p-5">
+        <video
+          width="600"
+          height="450"
+          controls
+          autoPlay
+          loop
+          controlsList="nodownload"
+        >
+          <source src={VideoUrl} type="video/mp4" />
+        </video>
+      </div>
       <h1 className="heading font-poppins text-4xl pb-10 m-0 font-bold">
         Why Choose Wireless?
       </h1>
-      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-2">
+      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-5">
         {datafile.benifits.map((item) => {
           // const isOpen = openItems.has(item.id);
           return (
@@ -68,8 +80,8 @@ const WhytoChoose = () => {
               <div
                 // key={`${item.id}`}
                 // ${ // isOpen ? "open rounded-2xl" : "" }
-                className={`card flex flex-col
-              mb-1 w-[20em] h-[18em] rounded-md bg-slate-100 shadow-sm shadow-slate-300 border-2 border-slate-300`}
+                className={`card flex flex-col justify-center items-center
+              mb-1 w-[20em] h-[16em] rounded-sm bg-white`}
                 style={
                   {
                     // background: isOpen
@@ -88,16 +100,11 @@ const WhytoChoose = () => {
                   //     : "transparent",
                   // }}
                 >
-                  <h1 className="font-poppins font-semibold text-[#1E90FF] text-2xl p-3">
-                    {item.title}
-                  </h1>
-                  <span>
-                    <img
-                      className="w-10 h-10"
-                      src={item.img}
-                      alt={item.title}
-                    />
-                  </span>
+                  <img
+                    className="w-[5em] h-[5em]"
+                    src={item.img}
+                    alt={item.title}
+                  />
                   {/* <button
                   className="absolute right-3 text-3xl text-blue-50 font-semibold cursor-pointer"
                   onClick={() => toggleEvent(item.id)}
@@ -108,12 +115,13 @@ const WhytoChoose = () => {
 
                 {/* Description and Image (Visible only if open) */}
                 {/* {isOpen && ( */}
-                <div className="relative flex flex-col md:flex-row items-center mt-2">
-                  <div className="w-[80vw] h-[max-content]">
-                    <p className="font-poppins font-medium text-lg text-[#696969] p-5">
-                      {item.description}
-                    </p>
-                  </div>
+                <div className="relative flex flex-col justify-center items-center h-[max-content] w-full mt-2">
+                  <h1 className="font-poppins font-semibold text-[#1E90FF] text-2xl p-2">
+                    {item.title}
+                  </h1>
+                  <p className="font-poppins font-medium text-lg text-[#696969] p-3 ">
+                    {item.description}
+                  </p>
                 </div>
                 {/* )} */}
               </div>

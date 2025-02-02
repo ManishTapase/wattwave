@@ -4,25 +4,33 @@
       "id": 1,
       "title": "Efficiency",
       "description": "Our wireless charging solutions are designed to maximize efficiency, ensuring that your EV spends more time on the road and less time tethered to a charging station.",
-      "img": "/wattwave/Assetss/car2.jpeg"
+      "img": "/wattwave/Assetss/car2.jpeg",
+      "iconW": "/wattwave/Assetss/efficiency_w.png",
+      "iconB": "/wattwave/Assetss/efficiency_b.png"
     },
     {
       "id": 2,
       "title": "Convenience",
       "description": "Say goodbye to the hassle of plugging and unplugging your vehicle. With Watt Wave, charging your EV is as simple as parking it over our charging pad.",
-      "img": "/wattwave/Assetss/BMW-Wire.jpg"
+      "img": "/wattwave/Assetss/BMW-Wire.jpg",
+      "iconW": "/wattwave/Assetss/convenience_w.png",
+      "iconB": "/wattwave/Assetss/convenience_b.png"
     },
     {
       "id": 3,
       "title": "Versatility",
       "description": "Whether you're at home, at work, or on the go, our wireless chargers are designed to seamlessly integrate into your lifestyle, providing reliable power wherever you need it.",
-      "img": "/wattwave/Assetss/car-1.webp"
+      "img": "/wattwave/Assetss/car-1.webp",
+      "iconW": "/wattwave/Assetss/versality_w.png",
+      "iconB": "/wattwave/Assetss/versality_b.png"
     },
     {
       "id": 4,
       "title": "Sustainability",
       "description": "By eliminating the need for traditional charging cables, Watt Wave is helping to reduce waste and minimize environmental impact, one charge at a time.",
-      "img": "/wattwave/Assetss/parkCarEvPad.png"
+      "img": "/wattwave/Assetss/parkCarEvPad.png",
+      "iconW": "/wattwave/Assetss/sustainablity_w.png",
+      "iconB": "/wattwave/Assetss/sustainability_b.png"
     }
   ],
   "products": [
