@@ -1,12 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../Assets/logo.png";
+import mainLogo from "../Assets/mainLogo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router";
+import gsap from "gsap";
 
 const Navigation = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [step, setStep] = useState(0);
+  const [showAnimation, setShowAnimation] = useState(true);
+  const textRef = useRef(null);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!textRef.current) return;
+
+    const chars = textRef.current.querySelectorAll("span");
+
+    gsap.fromTo(
+      chars,
+      { y: "100%", opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.5,
+        // rotateZ: "10",
+        ease: "power1.Out",
+        // repeat: -1,
+        yoyo: true,
+      }
+    );
+
+    // if (showAnimation) {
+    //   let stepCount = 1;
+    //   const interval = setInterval(() => {
+    //     setStep(stepCount);
+    //     stepCount++;
+
+    //     if (stepCount > 1) {
+    //       clearInterval(interval);
+    //       // sessionStorage.setItem("seenNavbarAnimation", "true");
+    //       setTimeout(() => {
+    //         setShowAnimation(false);
+    //       }, 2000);
+    //     }
+    //   }, 3000);
+    // }
+  }, []);
 
   const handleNavigation = (e, targetId) => {
     e.preventDefault();
@@ -33,6 +75,26 @@ const Navigation = () => {
     setIsExpanded((prev) => !prev);
   };
 
+  // const splitText = (text) => {
+  //   return text.split("").map((elm, index) => (
+  //     <span key={index} className="inline-block">
+  //       {elm}
+  //     </span>
+  //   ));
+  // };
+
+  const splitText = (text) => {
+    return text.split("").map((char, index) => (
+      <span
+        key={index}
+        style={{
+          display: "inline-block",
+        }}
+      >
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ));
+  };
   return (
     <header
       style={{
@@ -41,11 +103,29 @@ const Navigation = () => {
       }}
       className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-300"
     >
-      <nav className="relative flex justify-between items-center px-6 py-4">
+      <nav className="relative flex justify-between items-center px-6 py-4 h-[max-content]">
         {/* Logo */}
-        <a href="/">
+        {/* <a href="/">
           <img className="h-10 w-auto" src={logo} alt="Logo" />
-        </a>
+        </a> */}
+
+        <span className="flex flex-col">
+          <a href="/">
+            <img className="h-12 w-auto" src={logo} alt="Logo" />
+          </a>
+          <h6
+            ref={textRef}
+            style={{ fontFamily: "CustomFont, sans-serif" }}
+            className="text-[7px] font-bold"
+          >
+            <span
+              style={{ fontFamily: "CustomFont, sans-serif" }}
+              className="text-[7px] font-bold"
+            >
+              {splitText("YOU PARK WE CHARGE")}
+            </span>
+          </h6>
+        </span>
 
         {/* Links */}
         <ul

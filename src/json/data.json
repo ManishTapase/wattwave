@@ -114,5 +114,42 @@
       "question": "Are there any limitations to using wireless charging for electric vehicles?",
       "ans": "While wireless charging offers many benefits, it's important to note that there may be some limitations compared to traditional wired charging. For example, wireless charging systems may be less efficient over longer distances or when there are obstacles between the charging pad and the vehicle's receiver. Additionally, compatibility with specific makes and models of electric vehicles may vary."
     }
+  ],
+  "supportedBy": [
+    {
+      "id": 1,
+      "img": "/wattwave/Assetss/s1.jpg",
+      "link": ""
+    },
+    {
+      "id": 2,
+      "img": "/wattwave/Assetss/s2.jpg",
+      "link": ""
+    },
+    {
+      "id": 3,
+      "img": "/wattwave/Assetss/s3.jpg",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "img": "/wattwave/Assetss/s4.jpg",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "img": "/wattwave/Assetss/s5.jpg",
+      "link": ""
+    },
+    {
+      "id": 6,
+      "img": "/wattwave/Assetss/s6.jpg",
+      "link": ""
+    },
+    {
+      "id": 7,
+      "img": "/wattwave/Assetss/s7.jpg",
+      "link": ""
+    }
   ]
 }

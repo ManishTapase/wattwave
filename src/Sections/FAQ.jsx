@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FAQ = () => {
   const [openQuestions, setOpenQuestions] = useState(new Set());
+  const headingRef = useRef(null);
 
   useEffect(() => {
     gsap.utils.toArray(".faqDiv").forEach((section) => {
@@ -33,6 +34,27 @@ const FAQ = () => {
         }
       );
     });
+
+    gsap.fromTo(
+      headingRef.current,
+      {
+        fontSize: "100vw",
+        zIndex: 100,
+        opacity: 0,
+      },
+      {
+        fontSize: "64px",
+        zIndex: 0,
+        opacity: 1,
+        duration: 3,
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 70%",
+          end: "top 40%",
+          scrub: true,
+        },
+      }
+    );
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -61,10 +83,13 @@ const FAQ = () => {
         }
       }
     >
-      <h1 className="heading font-poppins text-4xl pb-10 m-0 font-bold pt-10">
+      <h1
+        ref={headingRef}
+        className="heading font-poppins text-4xl pb-10 m-0 font-bold pt-10"
+      >
         FAQ
       </h1>
-      <div className="flex flex-col w-[90vw] p-5">
+      <div className="flex flex-col w-[100vw] p-5">
         {datafile.questions.map((item) => {
           const isOpen = openQuestions.has(item.id);
           return (

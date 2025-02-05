@@ -86,6 +86,7 @@ const Hero = () => {
           // background: "linear-gradient(to bottom, #0f2027, #203a43, #2c5364)",
         }}
       >
+        {/* <span className="penta"></span> */}
         <div
           // id="home"
           className="flex items-center justify-center w-screen h-[60vh] md:h-screen"

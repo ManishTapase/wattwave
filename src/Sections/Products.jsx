@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -6,6 +6,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Products = () => {
+  const headingRef = useRef(null);
+
   useEffect(() => {
     const sections = gsap.utils.toArray(".productDiv");
     sections.forEach((section) => {
@@ -13,7 +15,7 @@ const Products = () => {
       gsap.fromTo(
         product,
         {
-          x: 100,
+          x: 0,
           y: 50,
           opacity: 0,
         },
@@ -31,6 +33,23 @@ const Products = () => {
         }
       );
     });
+    const char = headingRef.current.querySelectorAll("span");
+
+    gsap.set(char, {
+      transformOrigin: "center center -50px",
+      backfaceVisibility: "hidden",
+    });
+
+    gsap.to(char, 3, {
+      rotationX: "360",
+      stagger: 0.1,
+      // repeat: 2,
+      scrollTrigger: {
+        trigger: headingRef.current,
+        start: "top 80%",
+        end: "top 60%",
+      },
+    });
 
     // Cleanup ScrollTrigger instances on component unmount
     return () => {
@@ -38,10 +57,26 @@ const Products = () => {
     };
   }, []);
 
+  const splitText = (text) => {
+    return text.split("").map((char, index) => (
+      <span
+        key={index}
+        style={{
+          display: "inline-block",
+        }}
+      >
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ));
+  };
+
   return (
     <section className="flex flex-col items-center h-auto w-full px-4 py-8">
-      <h1 className="heading font-poppins text-4xl pb-10 font-bold text-center">
-        Our Products
+      <h1
+        ref={headingRef}
+        className="heading font-poppins text-4xl pb-10 font-bold text-center"
+      >
+        {splitText("Our Products")}
       </h1>
       <div className="flex flex-wrap justify-center items-center gap-5 w-full">
         {datafile.products.map((item, id) => (
@@ -50,23 +85,28 @@ const Products = () => {
             className="productDiv flex justify-center items-center"
           >
             <div
-              className="product flex flex-col bg-slate-200 justify-start items-center h-[25em] w-[20em] rounded-lg p-4"
+              className="product relative flex flex-col bg-slate-200 justify-start items-center h-[25em] w-[20em] rounded-sm"
               // style={{
               //   background:
               //     "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)",
               // }}
             >
-              <h3 className="font-poppins font-semibold text-[#1E90FF] text-xl">
-                {item.title}
-              </h3>
               <img
                 src={item.img}
                 alt={item.title}
-                className="h-[12em] w-[16em] object-cover rounded-md mt-3"
+                className="h-[60%] w-full object-cover"
               />
-              <p className="p-4 font-poppins font-medium text-[#696969]">
-                {item.description}
-              </p>
+              <div className="absolute bottom-2 bg-[#ffffffbe] w-[90%] h-[50%] rounded-md flex flex-col justify-center items-center ">
+                <h3 className="font-poppins font-semibold text-[#1E90FF] text-lg">
+                  {item.title}
+                </h3>
+                <p className="p-4 h-[70%] font-poppins font-normal text-[#696969]">
+                  {item.description}
+                </p>
+                <h4 className="absolute bottom-2 right-10 font-poppins text-base">
+                  more <i className="fa-solid fa-arrow-right" />
+                </h4>
+              </div>
             </div>
           </div>
         ))}

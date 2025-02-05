@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 // import Navbar from "./Navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../Assets/logo.png";
 import Arrow from "../Assets/arrow.png";
 import "../styles/footer.css";
 import { useNavigate } from "react-router";
+import gsap from "gsap";
+
 const Footer = () => {
   const navigate = useNavigate();
+  const textRef = useRef(null);
 
   const handleNavigation = (e, targetId) => {
     e.preventDefault();
@@ -28,6 +31,40 @@ const Footer = () => {
 
     checkSection();
   };
+
+  useEffect(() => {
+    if (!textRef.current) return;
+
+    const chars = textRef.current.querySelectorAll("span");
+
+    gsap.fromTo(
+      chars,
+      { y: "100%", opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.5,
+        // rotateZ: "10",
+        ease: "power1.Out",
+        // repeat: -1,
+        yoyo: true,
+      }
+    );
+  }, []);
+  const splitText = (text) => {
+    return text.split("").map((char, index) => (
+      <span
+        key={index}
+        style={{
+          display: "inline-block",
+        }}
+      >
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ));
+  };
+
   return (
     <>
       <section className="relative w-[100vw] h-[70vh] md:h-[70%] flex justify-center flex-col md:flex-row items-center">
@@ -39,10 +76,24 @@ const Footer = () => {
           className="relative  py-12 px-6 w-full md:w-[90%] h-full flex flex-col justify-center items-center"
         >
           <nav className="flex flex-col md:flex-row md:w-[80%] w-[70%] justify-start items-center max-container pb-6">
-            <a href="/home" onClick={(e) => handleNavigation(e, "home")}>
-              <img className="h-10 w-15" src={logo} alt="" />
-            </a>
-            <ul className="flex flex-col md:flex-row justify-center items-center gap-2 pl-8 pr-8 md:gap-16">
+            <span className="flex flex-col md:mr-10 mb-5 md:mb-0">
+              <a href="/">
+                <img className="h-10 w-auto" src={logo} alt="Logo" />
+              </a>
+              <h6
+                ref={textRef}
+                style={{ fontFamily: "CustomFont, sans-serif" }}
+                className="text-[5px] font-bold"
+              >
+                <span
+                  style={{ fontFamily: "CustomFont, sans-serif" }}
+                  className="text-[5px] font-bold text-white"
+                >
+                  {splitText("YOU PARK WE CHARGE")}
+                </span>
+              </h6>
+            </span>
+            <ul className="flex flex-col md:flex-row justify-center items-center gap-2 pl-8 pr-8 md:gap-14">
               <li>
                 <a
                   href="/home"

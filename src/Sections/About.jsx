@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   const textRef = useRef(null);
   const gsapContext = useRef();
+  const headRef = useRef(null);
+
   // const carRef = useRef(null);
   useEffect(() => {
     if (!textRef.current) return;
@@ -39,6 +41,27 @@ const About = () => {
         }
       );
     });
+
+    gsap.fromTo(
+      headRef.current,
+      {
+        y: 50,
+        x: 0,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: headRef.current,
+          start: "top 70%",
+          end: "top 50%",
+          scrub: true,
+        },
+      }
+    );
 
     // gsap.fromTo(
     //   car,
@@ -90,7 +113,10 @@ const About = () => {
       }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <h1 className="heading font-poppins text-4xl font-bold text-center">
+        <h1
+          ref={headRef}
+          className="heading font-poppins text-4xl font-bold text-center"
+        >
           About
         </h1>
 

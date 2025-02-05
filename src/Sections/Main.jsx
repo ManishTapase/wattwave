@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Footer from "../Components/Footer";
 import "../index.css";
 import Loader from "../Components/loader2";
+import SupportedBy from "./SupportedBy";
 // import "../styles/font.css";
 
 // LazyLoadSection Component
@@ -126,6 +127,11 @@ const Main = () => {
             <MissionVision />
           </LazyLoadSection>
         </Suspense>
+        <LazyLoadSection>
+          <section id="supportedBy">
+            <SupportedBy />
+          </section>
+        </LazyLoadSection>
         <section id="footer">
           <Footer />
         </section>

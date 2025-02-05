@@ -17,6 +17,16 @@
   /* width: 1000vw; */
   animation: wave 3s 1 linear;
 }
+/* 
+.penta {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background: rgb(115, 115, 255);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 10%, 10% 50%);
+} */
 
 @keyframes wave {
   0% {

@@ -1,20 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/whytochoose.css";
 import VideoUrl from "../Assets/wattwave.mp4";
 gsap.registerPlugin(ScrollTrigger);
+
 const WhytoChoose = () => {
+  const headingRef = useRef(null);
+
   useEffect(() => {
     const sections = gsap.utils.toArray(".cardDiv");
+    const char = headingRef.current.querySelectorAll("span");
+
     sections.forEach((section) => {
       const product = section.querySelector(".card");
       gsap.fromTo(
         product,
         {
-          y: "100%",
-          x: 0,
+          y: 0,
+          x: -30,
           opacity: 0,
         },
         {
@@ -25,11 +30,27 @@ const WhytoChoose = () => {
           scrollTrigger: {
             trigger: section,
             start: "top 80%",
-            end: "top 50%",
+            end: "top 60%",
             scrub: true,
           },
         }
       );
+    });
+
+    gsap.set(char, {
+      transformOrigin: "center center -50px",
+      backfaceVisibility: "hidden",
+    });
+
+    gsap.to(char, 3, {
+      rotationX: "360",
+      stagger: 0.1,
+      // repeat: 2,
+      scrollTrigger: {
+        trigger: headingRef.current,
+        start: "top 80%",
+        end: "top 60%",
+      },
     });
 
     // Cleanup ScrollTrigger instances on component unmount
@@ -52,27 +73,44 @@ const WhytoChoose = () => {
   //   });
   // };
 
+  const splitText = (text) => {
+    return text.split("").map((char, index) => (
+      <span
+        key={index}
+        style={{
+          display: "inline-block",
+        }}
+      >
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ));
+  };
+
   return (
     <section
-      className="w-screen flex flex-col justify-center items-center padding"
+      className="w-screen flex flex-col justify-center items-center pb-1 pt-5 pl-5 pr-5"
       style={{ height: "max-content" }}
     >
       <div className="p-5">
         <video
           width="600"
           height="450"
-          controls
           autoPlay
           loop
+          muted
+          controls
           controlsList="nodownload"
         >
           <source src={VideoUrl} type="video/mp4" />
         </video>
       </div>
-      <h1 className="heading font-poppins text-4xl pb-10 m-0 font-bold">
-        Why Choose Wireless?
+      <h1
+        ref={headingRef}
+        className="heading font-poppins text-4xl pb-10 m-0 font-bold"
+      >
+        {splitText("Why Choose Wireless?")}
       </h1>
-      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-5">
+      <div className="w-full flex flex-col md:flex-row justify-center content-center items-center md:gap-5 gap-1">
         {datafile.benifits.map((item) => {
           // const isOpen = openItems.has(item.id);
           return (
@@ -80,8 +118,8 @@ const WhytoChoose = () => {
               <div
                 // key={`${item.id}`}
                 // ${ // isOpen ? "open rounded-2xl" : "" }
-                className={`card flex flex-col justify-center items-center
-              mb-1 w-[20em] h-[16em] rounded-sm bg-white`}
+                className={`card flex md:flex-col justify-center items-center
+              mb-1 md:w-[20em] w-[90vw] md:h-[16rem] h-[14rem] rounded-sm bg-white`}
                 style={
                   {
                     // background: isOpen
@@ -101,7 +139,7 @@ const WhytoChoose = () => {
                   // }}
                 >
                   <img
-                    className="w-[5em] h-[5em]"
+                    className="md:w-[5rem] w-[6rem] h-[6rem] md:h-[5rem]"
                     src={item.img}
                     alt={item.title}
                   />
@@ -115,11 +153,11 @@ const WhytoChoose = () => {
 
                 {/* Description and Image (Visible only if open) */}
                 {/* {isOpen && ( */}
-                <div className="relative flex flex-col justify-center items-center h-[max-content] w-full mt-2">
+                <div className="relative flex flex-col justify-center items-center h-[max-content] w-full md:mt-2">
                   <h1 className="font-poppins font-semibold text-[#1E90FF] text-2xl p-2">
                     {item.title}
                   </h1>
-                  <p className="font-poppins font-medium text-lg text-[#696969] p-3 ">
+                  <p className="font-poppins font-medium text-base text-[#696969] p-3 ">
                     {item.description}
                   </p>
                 </div>
