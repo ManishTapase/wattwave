@@ -169,7 +169,7 @@ const WhyWattWave = () => {
       char,
       { fontSize: "1rem", opacity: 0, zIndex: -1 },
       {
-        fontSize: "4.5rem",
+        fontSize: "4rem",
         opacity: 1,
         zIndex: 0,
         rotationX: "360",
@@ -186,7 +186,7 @@ const WhyWattWave = () => {
 
   const splitText = (text) => {
     return text.split("").map((char, index) => (
-      <span key={index} className="inline-block">
+      <span key={index} className="inline-block heading">
         {char === " " ? "\u00A0" : char}
       </span>
     ));
@@ -205,7 +205,7 @@ const WhyWattWave = () => {
         <div className="w-full flex justify-center items-center flex-wrap">
           <h1
             ref={headingRef}
-            className="heading font-poppins text-4xl p-4 m-0 font-bold"
+            className="heading font-poppins p-4 m-0 font-bold"
           >
             {splitText("Why Watt Wave?")}
           </h1>

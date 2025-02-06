@@ -25,7 +25,7 @@ body {
 
 @layer utilities {
   .heading {
-    @apply text-[#4169E1] text-4xl ease-linear transition-all;
+    @apply text-[#4169E1] md:text-4xl text-[3rem] ease-linear transition-all font-poppins text-center font-bold mb-2;
   }
   .navItem {
     @apply font-poppins md:font-medium leading-normal md:text-xl text-2xl font-medium text-[#002933];

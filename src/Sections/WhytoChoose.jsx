@@ -104,10 +104,7 @@ const WhytoChoose = () => {
           <source src={VideoUrl} type="video/mp4" />
         </video>
       </div>
-      <h1
-        ref={headingRef}
-        className="heading font-poppins text-4xl pb-10 m-0 font-bold"
-      >
+      <h1 ref={headingRef} className="heading font-poppins pb-10 m-0 font-bold">
         {splitText("Why Choose Wireless?")}
       </h1>
       <div className="w-full flex flex-col md:flex-row justify-center content-center items-center md:gap-5 gap-1">

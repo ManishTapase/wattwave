@@ -4,6 +4,7 @@ import gsap from "gsap";
 const SupportedBy = () => {
   const containerRef = useRef(null);
   const imagesRef = useRef([]);
+  const headRef = useRef(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -17,7 +18,7 @@ const SupportedBy = () => {
 
     gsap.to(container, {
       xPercent: -50,
-      duration: 10,
+      duration: 5,
       ease: "linear",
       repeat: -1,
       modifiers: {
@@ -42,15 +43,58 @@ const SupportedBy = () => {
         img.style.opacity = `${edgeFade}`;
       });
     });
+
+    const word = headRef.current.querySelectorAll("span");
+    gsap.set(word, {
+      transformOrigin: "center center -50px",
+      backfaceVisibility: "hidden",
+    });
+    gsap.fromTo(
+      word,
+      {
+        y: "20vh",
+        x: 0,
+      },
+      {
+        y: 0,
+        duration: 2,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: headRef.current,
+          start: "top 60%",
+          end: "top 50%",
+          scrub: true,
+        },
+      }
+    );
   }, []);
+
+  const splitText = (text) => {
+    return text.split(" ").map((char, index) => (
+      <span
+        key={index}
+        style={{
+          display: "inline-block",
+        }}
+      >
+        {char + "\u00A0"}
+      </span>
+    ));
+  };
+
   return (
     <>
       <section
         style={{
           overflow: "hidden",
         }}
-        className="relative w-screen h-15vh p-5"
+        className="relative flex flex-col justify-center items-center  w-screen h-15vh p-5"
       >
+        <div style={{ overflow: "hidden" }}>
+          <h1 ref={headRef} className="heading">
+            {splitText("Recognized & Supported by")}
+          </h1>
+        </div>
         <div ref={containerRef} className="flex gap-10 p-2 whitespace-nowrap ">
           {dataFile.supportedBy.map((elm, index) => {
             return (

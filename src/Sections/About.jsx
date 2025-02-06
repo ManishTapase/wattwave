@@ -45,19 +45,18 @@ const About = () => {
     gsap.fromTo(
       headRef.current,
       {
-        y: 50,
+        y: 60,
         x: 0,
-        opacity: 0,
       },
       {
         y: 0,
         x: 0,
-        opacity: 1,
         duration: 2,
+        stagger: 0.1,
         scrollTrigger: {
           trigger: headRef.current,
           start: "top 70%",
-          end: "top 50%",
+          end: "top 60%",
           scrub: true,
         },
       }
@@ -113,12 +112,18 @@ const About = () => {
       }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <h1
-          ref={headRef}
-          className="heading font-poppins text-4xl font-bold text-center"
+        <div
+          style={{
+            overflowY: "hidden",
+          }}
         >
-          About
-        </h1>
+          <h1
+            ref={headRef}
+            className="heading font-poppins font-bold text-center"
+          >
+            About
+          </h1>
+        </div>
 
         <div className="para flex flex-col justify-center items-center mt-4">
           <div className="md:h-[40vh] md:w-[80vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
