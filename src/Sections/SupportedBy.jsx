@@ -17,8 +17,8 @@ const SupportedBy = () => {
     totalImages.forEach((img) => container.appendChild(img));
 
     gsap.to(container, {
-      xPercent: -50,
-      duration: 5,
+      xPercent: -100,
+      duration: 7,
       ease: "linear",
       repeat: -1,
       modifiers: {
@@ -58,10 +58,11 @@ const SupportedBy = () => {
       {
         y: 0,
         duration: 2,
-        stagger: 0.2,
+        rotationX: "360",
+        stagger: 0.4,
         scrollTrigger: {
           trigger: headRef.current,
-          start: "top 60%",
+          start: "top 70%",
           end: "top 50%",
           scrub: true,
         },
@@ -88,7 +89,7 @@ const SupportedBy = () => {
         style={{
           overflow: "hidden",
         }}
-        className="relative flex flex-col justify-center items-center  w-screen h-15vh p-5"
+        className="relative flex flex-col justify-center items-center  w-screen h-15vh p-5 pt-24"
       >
         <div style={{ overflow: "hidden" }}>
           <h1 ref={headRef} className="heading">

@@ -85,7 +85,7 @@ const FAQ = () => {
     >
       <h1
         ref={headingRef}
-        className="heading font-poppins text-4xl pb-10 m-0 font-bold pt-10"
+        className="heading font-poppins text-4xl pb-13 m-0 font-bold pt-10"
       >
         FAQ
       </h1>

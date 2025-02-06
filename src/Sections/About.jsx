@@ -105,7 +105,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex justify-center items-center w-screen pt-10 bg-cover bg-center"
+      className="relative flex justify-center items-center w-screen pt-8 bg-cover bg-center"
       style={{
         position: "relative",
         // backgroundImage: `url(${aboutBg})`,

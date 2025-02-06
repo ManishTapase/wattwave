@@ -181,8 +181,12 @@ const Navigation = () => {
             </a>
           </li>
           <li className="mt-4 md:mt-0">
-            <a href="/" className="navItem">
-              Sign In
+            <a
+              href="/home#supportedBy"
+              onClick={(e) => handleNavigation(e, "supportedBy")}
+              className="navItem"
+            >
+              supportedBy
             </a>
           </li>
         </ul>

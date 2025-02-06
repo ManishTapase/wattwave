@@ -74,7 +74,7 @@ const Products = () => {
     <section className="flex flex-col items-center h-auto w-full px-4 py-8">
       <h1
         ref={headingRef}
-        className="heading font-poppins text-4xl pb-10 font-bold text-center"
+        className="heading font-poppins text-4xl pb-4 font-bold text-center"
       >
         {splitText("Our Products")}
       </h1>
