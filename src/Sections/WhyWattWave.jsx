@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Animation from "../Components/Animation";
 import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -7,19 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const WhyWattWave = () => {
   const [clicked, setClicked] = useState(new Set());
   const containerRefs = useRef([]);
-  const headingRef = useRef(null);
-
-  // const imgToggle = (id) => {
-  //   setClicked((prevSet) => {
-  //     const set = new Set(prevSet);
-  //     if (set.has(id)) {
-  //       set.delete(id);
-  //     } else {
-  //       set.add(id);
-  //     }
-  //     return set;
-  //   });
-  // };
 
   const animatedBg = (id, index, imageUrl) => {
     const selectedDiv = containerRefs.current[index];
@@ -35,7 +23,7 @@ const WhyWattWave = () => {
         backgroundPosition: "center",
         backgroundClip: "content-box",
         ease: "back.inOut",
-        transition: "all 2s ease",
+        transition: "all 1s ease-in-out",
       }
     );
 
@@ -84,39 +72,61 @@ const WhyWattWave = () => {
       );
     });
 
-    const char = headingRef.current.querySelectorAll("span");
+    // const char = headingRef.current.querySelectorAll("span");
 
-    gsap.set(char, {
-      transformOrigin: "center center -50px",
-      backfaceVisibility: "hidden",
-    });
+    // gsap.set(char, {
+    //   transformOrigin: "center center -50px",
+    //   backfaceVisibility: "hidden",
+    // });
 
-    gsap.fromTo(
-      char,
-      { fontSize: "1rem", opacity: 0, zIndex: -1 },
-      {
-        fontSize: "4rem",
-        opacity: 1,
-        zIndex: 0,
-        rotationX: "360",
-        stagger: 0.1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: headingRef.current,
-          start: "top 80%",
-          end: "top 60%",
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   char,
+    //   { fontSize: "1rem", opacity: 0, zIndex: -1 },
+    //   {
+    //     fontSize: "4rem",
+    //     opacity: 1,
+    //     zIndex: 0,
+    //     rotationX: "360",
+    //     stagger: 0.1,
+    //     duration: 1,
+    //     scrollTrigger: {
+    //       trigger: headingRef.current,
+    //       start: "top 80%",
+    //       end: "top 60%",
+    //     },
+    //   }
+    // );
+
+    //   gsap.fromTo(
+    //     char,
+    //     {
+    //       fontSize: "10vw",
+    //       zIndex: 100,
+    //       opacity: 0,
+    //     },
+    //     {
+    //       fontSize: "4rem",
+    //       zIndex: 0,
+    //       opacity: 1,
+    //       duration: 3,
+    //       textAlign: "center",
+    //       scrollTrigger: {
+    //         trigger: headingRef.current,
+    //         start: "top 70%",
+    //         end: "top 40%",
+    //         scrub: true,
+    //       },
+    //     }
+    //   );
   }, []);
 
-  const splitText = (text) => {
-    return text.split("").map((char, index) => (
-      <span key={index} className="inline-block heading">
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ));
-  };
+  // const splitText = (text) => {
+  //   return text.split("").map((char, index) => (
+  //     <span key={index} className="inline-block heading">
+  //       {char === " " ? "\u00A0" : char}
+  //     </span>
+  //   ));
+  // };
 
   // ${id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
   return (
@@ -129,13 +139,7 @@ const WhyWattWave = () => {
         }}
       >
         <div className="w-full flex justify-center items-center flex-wrap">
-          <h1
-            ref={headingRef}
-            className="heading font-poppins p-4 m-0 font-bold"
-          >
-            {splitText("Why Watt Wave?")}
-          </h1>
-
+          <Animation heading={"Why Watt Wave?"} />
           <section className="h-[max-content] w-full flex flex-col md:flex-row flex-wrap justify-center items-center gap-10">
             {datafile.Advantages.map((item, index) => {
               const isClicked = clicked.has(item.id);
@@ -150,7 +154,7 @@ const WhyWattWave = () => {
                       transition: `${isClicked ? "all 1s ease" : ""}`,
                     }}
                     className={`description border-[1px] border-gray-300 
-                h-[20em] w-full md:w-[42vw] rounded-md flex justify-center items-center shadow-md shadow-gray-300`}
+                h-[20em] w-[90vw] md:w-[42vw] rounded-md flex justify-center items-center shadow-md shadow-gray-300`}
                   >
                     <span
                       cl
@@ -159,7 +163,7 @@ const WhyWattWave = () => {
                       } w-[80%] flex flex-col content-start rounded-sm gap-2`}
                       style={{
                         padding: "15px",
-                        transition: "all 2s ease-in",
+                        transition: "all 1s ease-in-out",
                       }}
                     >
                       {/* text-[#1E90FF] */}

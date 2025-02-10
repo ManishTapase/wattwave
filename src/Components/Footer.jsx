@@ -67,7 +67,7 @@ const Footer = () => {
 
   return (
     <>
-      <section className="relative w-[100vw] h-[70vh] md:h-[70%] flex justify-center flex-col md:flex-row items-center">
+      <section className="relative w-[100vw] h-[60vh] md:h-[70%] flex justify-center flex-col md:flex-row items-center">
         <span
           style={{
             borderRadius: "20px 20px 0px 0px",

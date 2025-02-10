@@ -13,16 +13,17 @@ const SupportedBy = () => {
     const totalImages = [
       ...items,
       ...items.map((item) => item.cloneNode(true)),
+      ...items.map((item) => item.cloneNode(true)),
     ];
     totalImages.forEach((img) => container.appendChild(img));
 
     gsap.to(container, {
       xPercent: -100,
-      duration: 7,
+      duration: 10,
       ease: "linear",
       repeat: -1,
       modifiers: {
-        xPercent: (x) => `${x % -50}`,
+        xPercent: (x) => `${x % -100}`,
       },
     });
 
@@ -57,13 +58,12 @@ const SupportedBy = () => {
       },
       {
         y: 0,
-        duration: 2,
-        rotationX: "360",
-        stagger: 0.4,
+        duration: 1,
+        stagger: 0.3,
         scrollTrigger: {
           trigger: headRef.current,
-          start: "top 70%",
-          end: "top 50%",
+          start: "top 80%",
+          end: "top 60%",
           scrub: true,
         },
       }

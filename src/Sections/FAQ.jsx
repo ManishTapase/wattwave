@@ -4,11 +4,11 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/faq.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Animation from "../Components/Animation";
 gsap.registerPlugin(ScrollTrigger);
 
 const FAQ = () => {
   const [openQuestions, setOpenQuestions] = useState(new Set());
-  const headingRef = useRef(null);
 
   useEffect(() => {
     gsap.utils.toArray(".faqDiv").forEach((section) => {
@@ -34,27 +34,6 @@ const FAQ = () => {
         }
       );
     });
-
-    gsap.fromTo(
-      headingRef.current,
-      {
-        fontSize: "100vw",
-        zIndex: 100,
-        opacity: 0,
-      },
-      {
-        fontSize: "64px",
-        zIndex: 0,
-        opacity: 1,
-        duration: 3,
-        scrollTrigger: {
-          trigger: headingRef.current,
-          start: "top 70%",
-          end: "top 40%",
-          scrub: true,
-        },
-      }
-    );
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -83,12 +62,7 @@ const FAQ = () => {
         }
       }
     >
-      <h1
-        ref={headingRef}
-        className="heading font-poppins text-4xl pb-13 m-0 font-bold pt-10"
-      >
-        FAQ
-      </h1>
+      <Animation heading={"FAQ"} />
       <div className="flex flex-col w-[100vw] p-5">
         {datafile.questions.map((item) => {
           const isOpen = openQuestions.has(item.id);

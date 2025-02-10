@@ -82,6 +82,17 @@ const Navigation = () => {
   //     </span>
   //   ));
   // };
+  const updateProgressBar = () => {
+    const progressBar = document.querySelector(".progress-bar");
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+
+    const progress = (window.pageYOffset / totalHeight) * 100;
+    progressBar.style.width = progress + "%";
+  };
+
+  // updateProgressBar();
+  window.addEventListener("scroll", updateProgressBar);
+  window.addEventListener("resize", updateProgressBar);
 
   const splitText = (text) => {
     return text.split("").map((char, index) => (
@@ -201,6 +212,7 @@ const Navigation = () => {
           />
         </span>
       </nav>
+      <div className="progress-bar bg-blue-500 h-1"></div>
     </header>
   );
 };

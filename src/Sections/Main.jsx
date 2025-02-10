@@ -52,6 +52,7 @@ const Main = () => {
   // Importing Hero directly as it needs to render immediately
 
   // Lazy-loaded sections
+
   const About = React.lazy(() => import("./About"));
   const WhyWattWave = React.lazy(() => import("./WhyWattWave"));
   const Products = React.lazy(() => import("./Products"));
@@ -60,7 +61,7 @@ const Main = () => {
   );
   const WhytoChoose = React.lazy(() => import("./WhytoChoose"));
   const FAQ = React.lazy(() => import("./FAQ"));
-  const MissionVision = React.lazy(() => import("./Mission"));
+  const MissionVision = React.lazy(() => import("./missionVision"));
 
   return (
     <>
@@ -126,12 +127,12 @@ const Main = () => {
           <LazyLoadSection>
             <MissionVision />
           </LazyLoadSection>
+          <LazyLoadSection>
+            <section id="supportedBy">
+              <SupportedBy />
+            </section>
+          </LazyLoadSection>
         </Suspense>
-        <LazyLoadSection>
-          <section id="supportedBy">
-            <SupportedBy />
-          </section>
-        </LazyLoadSection>
         <section id="footer">
           <Footer />
         </section>

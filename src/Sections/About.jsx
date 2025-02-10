@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import car3 from "../Assets/aboutImg.webp";
-import aboutBg from "../Assets/aboutBg.png";
+import aboutBg from "../Assets/abtImg.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,23 +62,6 @@ const About = () => {
       }
     );
 
-    // gsap.fromTo(
-    //   car,
-    //   { y: "100%", x: 0, opacity: 0 },
-    //   {
-    //     y: 0,
-    //     x: 0,
-    //     opacity: 1,
-    //     duration: 2,
-    //     scrollTrigger: {
-    //       trigger: carRef.current,
-    //       start: "top 70%",
-    //       end: "top 40%",
-    //       scrub: true,
-    //     },
-    //   }
-    // );
-
     return () => {
       gsapContext.current.revert();
       // carRef.current.revert();
@@ -105,10 +88,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex justify-center items-center w-screen pt-8 bg-cover bg-center"
+      className="relative flex justify-center items-center w-screen bg-cover bg-center"
       style={{
         position: "relative",
-        // backgroundImage: `url(${aboutBg})`,
+        backgroundImage: `url(${aboutBg})`,
+        opacity: "10px",
       }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
@@ -126,16 +110,17 @@ const About = () => {
         </div>
 
         <div className="para flex flex-col justify-center items-center mt-4">
-          <div className="md:h-[40vh] md:w-[80vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
+          <div className="md:h-[40vh] md:w-[90vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
             <p
               ref={textRef}
-              className="font-poppins text-[#1E90FF] font-medium text-xl md:text-[25px] leading-relaxed"
+              className="font-poppins text-gray-500 font-medium text-xl md:text-[25px] leading-relaxed"
             >
-              {splitLines(`At Watt Wave, we're revolutionizing the way electric vehicles\n
-                (EVs) are charged. Gone are the days of tangled cords and\n
-                limited charging stations. With our cutting-edge wireless\n
-                charging technology, we're paving the way for a cleaner, more\n
-                convenient future.`)}
+              {splitLines(`
+                At Watt Wave, we're revolutionizing the way electric vehicles (EVs)\n
+                are charged. Gone are the days of tangled cords and limited  charging\n
+                stations. With our cutting-edge wireless charging technology,\n
+                we're paving the way for a cleaner, more convenient future.\n
+                `)}
             </p>
           </div>
 
