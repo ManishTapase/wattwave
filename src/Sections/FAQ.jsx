@@ -76,11 +76,11 @@ const FAQ = () => {
               <div
                 className={`faq flex ${
                   isOpen ? "flex-col" : "flex-row"
-                } relative p-8 rounded-xl`}
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)",
-                }}
+                } relative p-8 rounded-xl bg-blue-500`}
+                // style={{
+                //   background:
+                //     "linear-gradient(135deg, rgba(8, 101, 126, 0.9), #004e92)",
+                // }}
               >
                 {/* Question ID */}
                 <h3

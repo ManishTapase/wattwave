@@ -69,7 +69,6 @@ const WhytoChoose = () => {
           autoPlay
           loop
           muted
-          controls
           controlsList="nodownload"
         >
           <source src={VideoUrl} type="video/mp4" />

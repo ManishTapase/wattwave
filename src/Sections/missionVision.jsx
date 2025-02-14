@@ -20,7 +20,6 @@ const MissionVision = () => {
   };
 
   const isMobile = useIsMobile();
-  console.log(isMobile);
   useEffect(() => {
     const imgBro = imgRef.current.querySelectorAll(".imgBro");
     const imgCar = imgCRef.current.querySelectorAll(".imgCar");
@@ -77,8 +76,6 @@ const MissionVision = () => {
         duration: 1,
       }
     );
-
-    console.log(isMobile);
   }, [isMobile]);
   return (
     <>
@@ -122,6 +119,7 @@ const MissionVision = () => {
             ref={imgRef}
             style={{
               overflowY: "hidden",
+              overflowX: "hidden",
             }}
             className="md:relative md:w-[20rem] md:h-[20rem] md:overflow-x-hidden absolute top-1 left-1 w-[60%] h-[7rem]"
           >

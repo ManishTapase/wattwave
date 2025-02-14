@@ -71,11 +71,11 @@ const Footer = () => {
         <span
           style={{
             borderRadius: "20px 20px 0px 0px",
-            background: "linear-gradient(-45deg, #000428, #004e92)",
+            // background: "linear-gradient(-45deg, #000428, #004e92)",
           }}
-          className="relative  py-12 px-6 w-full md:w-[90%] h-full flex flex-col justify-center items-center"
+          className="relative bg-blue-600 py-12 px-6 w-full md:w-[90%] h-full flex flex-col justify-center items-center"
         >
-          <nav className="flex flex-col md:flex-row md:w-[80%] w-[70%] justify-start items-center max-container pb-6">
+          <nav className="flex flex-col md:flex-row md:w-[80%] w-[70%] justify-center items-center max-container p-2 mb-4 md:bg-white md:rounded-3xl">
             <span className="flex flex-col md:mr-10 mb-5 md:mb-0">
               <a href="/">
                 <img className="h-10 w-auto" src={logo} alt="Logo" />
@@ -87,18 +87,18 @@ const Footer = () => {
               >
                 <span
                   style={{ fontFamily: "CustomFont, sans-serif" }}
-                  className="text-[5px] font-bold text-white"
+                  className="text-[5px] font-bold text-white md:text-black"
                 >
                   {splitText("YOU PARK WE CHARGE")}
                 </span>
               </h6>
             </span>
-            <ul className="flex flex-col md:flex-row justify-center items-center gap-2 pl-8 pr-8 md:gap-14">
+            <ul className="flex flex-col md:flex-row justify-center items-center gap-2 pl-8 pr-8 md:gap-14 md:text-gray-700 text-white">
               <li>
                 <a
                   href="/home"
                   onClick={(e) => handleNavigation(e, "home")}
-                  className="font-poppins md:font-medium leading-normal text-lg text-blue-200  "
+                  className="font-poppins md:font-medium leading-normal text-lg  "
                 >
                   Home
                 </a>
@@ -107,7 +107,7 @@ const Footer = () => {
                 <a
                   href="/home#about"
                   onClick={(e) => handleNavigation(e, "about")}
-                  className="font-poppins md:font-medium leading-normal text-lg text-blue-200  "
+                  className="font-poppins md:font-medium leading-normal text-lg   "
                 >
                   About
                 </a>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <a
                   href="/home#products"
                   onClick={(e) => handleNavigation(e, "products")}
-                  className="font-poppins md:font-medium leading-normal text-lg text-blue-200  "
+                  className="font-poppins md:font-medium leading-normal text-lg "
                 >
                   products
                 </a>
@@ -132,7 +132,7 @@ const Footer = () => {
               </li> */}
             </ul>
             <div>
-              <span className="flex flex-row gap-6 text-2xl absolute bottom-14 left-[29%] md:relative md:bottom-0 p-1 text-blue-300">
+              <span className="flex flex-row gap-6 text-2xl absolute bottom-14 left-[29%] md:relative md:bottom-0 p-1 md:text-gray-700 text-white">
                 <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                 <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
                 <FontAwesomeIcon icon="fa-brands fa-facebook" />

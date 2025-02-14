@@ -92,7 +92,7 @@ const Hero = () => {
           className="flex items-center justify-center w-screen h-[60vh] md:h-screen"
         >
           <span
-            className="flex-start align-text-top gap-3 pl-6 md:pl-0"
+            className="flex-start align-text-top gap-3 pl-6 md:pl-0 text-center"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -130,7 +130,7 @@ const Hero = () => {
               >
                 let's start
               </button>
-              <button className="text-[#5ca6b2]">Learn more</button>
+              <button className="text-white">Learn more</button>
             </span>
           </span>
         </div>

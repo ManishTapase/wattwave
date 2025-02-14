@@ -154,7 +154,7 @@ const WhyWattWave = () => {
                       transition: `${isClicked ? "all 1s ease" : ""}`,
                     }}
                     className={`description border-[1px] border-gray-300 
-                h-[20em] w-[90vw] md:w-[42vw] rounded-md flex justify-center items-center shadow-md shadow-gray-300`}
+                h-[20em] w-[90vw] md:w-[40vw] rounded-md flex justify-center items-center shadow-md shadow-gray-300`}
                   >
                     <span
                       cl

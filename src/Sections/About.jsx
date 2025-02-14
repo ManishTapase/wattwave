@@ -109,8 +109,8 @@ const About = () => {
           </h1>
         </div>
 
-        <div className="para flex flex-col justify-center items-center mt-4">
-          <div className="md:h-[40vh] md:w-[90vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
+        <div className="para flex flex-col justify-center items-center">
+          <div className="h-auto md:w-[90vw] rounded-xl flex justify-center items-center px-6 py-4 md:px-0">
             <p
               ref={textRef}
               className="font-poppins text-gray-500 font-medium text-xl md:text-[25px] leading-relaxed"
