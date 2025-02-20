@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import car3 from "../Assets/aboutImg.webp";
-import aboutBg from "../Assets/abtImg.png";
+import aboutBg from "../Assets/wave3.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,9 +90,7 @@ const About = () => {
       id="about"
       className="relative flex justify-center items-center w-screen bg-cover bg-center"
       style={{
-        position: "relative",
         backgroundImage: `url(${aboutBg})`,
-        opacity: "10px",
       }}
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
@@ -123,17 +121,6 @@ const About = () => {
                 `)}
             </p>
           </div>
-
-          {/* <div
-            ref={carRef}
-            className="cardiv relative top-10 h-[30vh] md:h-[60vh] md:w-[60vw] w-[70vw] rounded-lg flex justify-center items-center"
-          >
-            <img
-              src={car3}
-              alt="Electric Car"
-              className="car h-[30vh] md:h-[45vh] md:w-[50vw] w-[70vw] rounded-lg object-cover shadow-sm shadow-slate-400"
-            />
-          </div> */}
         </div>
       </div>
     </section>

@@ -5,6 +5,8 @@ import gsap from "gsap";
 const MissionVision = () => {
   const imgRef = useRef(null);
   const imgCRef = useRef(null);
+  const visionRef = useRef(null);
+  const missionRef = useRef(null);
 
   const useIsMobile = () => {
     const [isMobile, setIsMobile] = useState(
@@ -23,6 +25,42 @@ const MissionVision = () => {
   useEffect(() => {
     const imgBro = imgRef.current.querySelectorAll(".imgBro");
     const imgCar = imgCRef.current.querySelectorAll(".imgCar");
+    const mHeadPara = missionRef.current.querySelectorAll(".mission");
+    const vHeadPara = visionRef.current.querySelectorAll(".vision");
+
+    gsap.fromTo(
+      mHeadPara,
+      {
+        x: -200,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: missionRef.current,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      vHeadPara,
+      {
+        x: 200,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: visionRef.current,
+          start: "top 80%",
+          end: "top 70%",
+        },
+      }
+    );
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -83,9 +121,12 @@ const MissionVision = () => {
         className="relative font-poppins bg-blue-600 h-[max-content] w-screen flex flex-col justify-center items-center p-6 gap-10"
         style={{ height: "max-content" }}
       >
-        <div className="relative w-full flex flex-row justify-center items-start ">
-          <div className="flex flex-col md:w-[60%] w-full p-0 m-0">
-            <h1 className="flex flex-col font-extrabold text-blue-400 text-4xl p-0">
+        <div
+          ref={missionRef}
+          className="relative w-full flex flex-row justify-center items-start "
+        >
+          <div className="mission flex flex-col md:w-[60%] w-full p-0 m-0">
+            <h1 className="h1 flex flex-col font-extrabold text-blue-400 text-4xl p-0">
               <span className="p-0 m-0 text-blue-100">Our</span>Mission
             </h1>
             <p className="flex md:text-start content-center text-wrap text-2xl font-medium md:w-[80%] w-full text-white">
@@ -104,8 +145,11 @@ const MissionVision = () => {
             <img src={mission} className="imgCar" alt="missionImg" />
           </div>
         </div>{" "}
-        <div className="relative w-full flex flex-row-reverse justify-center items-center">
-          <div className="flex items-end flex-col md:w-[60%] w-full p-0 m-0">
+        <div
+          ref={visionRef}
+          className="relative w-full flex flex-row-reverse justify-center items-center"
+        >
+          <div className="vision flex items-end flex-col md:w-[60%] w-full p-0 m-0">
             <h1 className="flex flex-col text-end font-extrabold text-blue-400 text-4xl p-0">
               <span className="p-0 m-0 text-blue-100">Our</span>Vision
             </h1>

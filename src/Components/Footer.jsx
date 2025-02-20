@@ -75,7 +75,7 @@ const Footer = () => {
           }}
           className="relative bg-blue-600 py-12 px-6 w-full md:w-[90%] h-full flex flex-col justify-center items-center"
         >
-          <nav className="flex flex-col md:flex-row md:w-[80%] w-[70%] justify-center items-center max-container p-2 mb-4 md:bg-white md:rounded-3xl">
+          <nav className="flex flex-col md:flex-row w-[max-content] justify-center items-center max-container p-2 mb-4 md:bg-white md:rounded-3xl">
             <span className="flex flex-col md:mr-10 mb-5 md:mb-0">
               <a href="/">
                 <img className="h-10 w-auto" src={logo} alt="Logo" />
@@ -132,13 +132,12 @@ const Footer = () => {
               </li> */}
             </ul>
             <div>
-              <span className="flex flex-row gap-6 text-2xl absolute bottom-14 left-[29%] md:relative md:bottom-0 p-1 md:text-gray-700 text-white">
+              <div className="flex flex-row gap-6 text-2xl absolute bottom-14 md:relative md:bottom-0 p-1 md:text-gray-700 text-white">
                 <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                 <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
                 <FontAwesomeIcon icon="fa-brands fa-facebook" />
                 <FontAwesomeIcon icon="fa-brands fa-instagram" />
-              </span>
-              <span></span>
+              </div>
             </div>
           </nav>
 

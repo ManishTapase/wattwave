@@ -105,7 +105,7 @@ const Main = () => {
           </LazyLoadSection>
 
           <LazyLoadSection>
-            <section id="products" className="pt-10">
+            <section id="products" className="p-20">
               <Products />
             </section>
           </LazyLoadSection>
@@ -114,12 +114,12 @@ const Main = () => {
             <HorizontalTextScroll />
           </LazyLoadSection>
           <LazyLoadSection>
-            <section id="about" className="pt-10">
+            <section id="about" className="pt-20">
               <About />
             </section>
           </LazyLoadSection>
           <LazyLoadSection>
-            <section id="faq" className="pt-10">
+            <section>
               <FAQ />
             </section>
           </LazyLoadSection>

@@ -3,7 +3,7 @@ import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/whytochoose.css";
-import VideoUrl from "../Assets/wattwave.mp4";
+import wattWaveCar from "../Assets/wattwaveGIF.gif";
 import Animation from "../Components/Animation";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,18 +62,10 @@ const WhytoChoose = () => {
       className="w-screen flex flex-col justify-center items-center pb-1 pt-5 pl-5 pr-5"
       style={{ height: "max-content" }}
     >
-      <div className="p-5">
-        <video
-          width="600"
-          height="450"
-          autoPlay
-          loop
-          muted
-          controlsList="nodownload"
-        >
-          <source src={VideoUrl} type="video/mp4" />
-        </video>
+      <div className="md:w-auto w-[90%] h-auto mt-12">
+        <img src={wattWaveCar} alt="wattWaveacar" />
       </div>
+
       <Animation heading={"Why To Choose?"} />
 
       <div className="w-full flex flex-col md:flex-row justify-center content-center items-center md:gap-5 gap-1">

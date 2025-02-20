@@ -3,6 +3,7 @@ import Animation from "../Components/Animation";
 import datafile from "../json/data.json";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import VideoUrl from "../Assets/videoW.mp4";
 gsap.registerPlugin(ScrollTrigger);
 
 const WhyWattWave = () => {
@@ -11,6 +12,16 @@ const WhyWattWave = () => {
 
   const animatedBg = (id, index, imageUrl) => {
     const selectedDiv = containerRefs.current[index];
+    const spann = selectedDiv.querySelectorAll("span");
+
+    gsap.fromTo(
+      spann,
+      { backgroundColor: "none" },
+      {
+        backgroundColor: "#3838388a",
+        duration: 1,
+      }
+    );
 
     gsap.fromTo(
       selectedDiv,
@@ -40,6 +51,10 @@ const WhyWattWave = () => {
         ease: "back.inOut",
       });
 
+      gsap.to(spann, {
+        background: "none",
+      });
+
       setClicked((prevSet) => {
         const set = new Set(prevSet);
         if (set.has(id)) {
@@ -53,7 +68,6 @@ const WhyWattWave = () => {
   useEffect(() => {
     gsap.utils.toArray(".fade-in").forEach((section) => {
       const description = section.querySelector(".description");
-      const description2 = section.querySelector(".description2");
       gsap.fromTo(
         description,
         { x: 0, y: "10vh", opacity: 0 },
@@ -61,7 +75,7 @@ const WhyWattWave = () => {
           x: 0,
           y: 0,
           opacity: 1,
-          duration: 2,
+          duration: 1,
           scrollTrigger: {
             trigger: section,
             start: "top 80%", // Start animation when section enters 80% of the viewport
@@ -71,68 +85,12 @@ const WhyWattWave = () => {
         }
       );
     });
-
-    // const char = headingRef.current.querySelectorAll("span");
-
-    // gsap.set(char, {
-    //   transformOrigin: "center center -50px",
-    //   backfaceVisibility: "hidden",
-    // });
-
-    // gsap.fromTo(
-    //   char,
-    //   { fontSize: "1rem", opacity: 0, zIndex: -1 },
-    //   {
-    //     fontSize: "4rem",
-    //     opacity: 1,
-    //     zIndex: 0,
-    //     rotationX: "360",
-    //     stagger: 0.1,
-    //     duration: 1,
-    //     scrollTrigger: {
-    //       trigger: headingRef.current,
-    //       start: "top 80%",
-    //       end: "top 60%",
-    //     },
-    //   }
-    // );
-
-    //   gsap.fromTo(
-    //     char,
-    //     {
-    //       fontSize: "10vw",
-    //       zIndex: 100,
-    //       opacity: 0,
-    //     },
-    //     {
-    //       fontSize: "4rem",
-    //       zIndex: 0,
-    //       opacity: 1,
-    //       duration: 3,
-    //       textAlign: "center",
-    //       scrollTrigger: {
-    //         trigger: headingRef.current,
-    //         start: "top 70%",
-    //         end: "top 40%",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
   }, []);
 
-  // const splitText = (text) => {
-  //   return text.split("").map((char, index) => (
-  //     <span key={index} className="inline-block heading">
-  //       {char === " " ? "\u00A0" : char}
-  //     </span>
-  //   ));
-  // };
-
-  // ${id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
   return (
     <>
       <section
-        className="w-[100vw] flex justify-center items-center m-0 md:padding pt-30"
+        className="w-[100vw] flex flex-col justify-center items-center content-center m-0  pt-30"
         style={{
           height: "max-content",
           // background: "linear-gradient(135deg, #000428, #004e92)",
@@ -154,16 +112,12 @@ const WhyWattWave = () => {
                       transition: `${isClicked ? "all 1s ease" : ""}`,
                     }}
                     className={`description border-[1px] border-gray-300 
-                h-[20em] w-[90vw] md:w-[40vw] rounded-md flex justify-center items-center shadow-md shadow-gray-300`}
+                h-[20em] w-[84vw] md:w-[40vw] rounded-md flex justify-start items-center shadow-md shadow-gray-300`}
                   >
                     <span
-                      cl
-                      className={`${
-                        isClicked ? "bg-[#3838388a]" : ""
-                      } w-[80%] flex flex-col content-start rounded-sm gap-2`}
+                      className={`spann last:w-[80%] flex flex-col content-start rounded-sm gap-2`}
                       style={{
                         padding: "15px",
-                        transition: "all 1s ease-in-out",
                       }}
                     >
                       {/* text-[#1E90FF] */}
@@ -202,6 +156,19 @@ const WhyWattWave = () => {
               );
             })}
           </section>
+        </div>
+
+        <div className="p-5 pt-10">
+          <video
+            width="600"
+            height="450"
+            autoPlay
+            loop
+            muted
+            controlsList="nodownload"
+          >
+            <source src={VideoUrl} type="video/mp4" />
+          </video>
         </div>
       </section>
     </>

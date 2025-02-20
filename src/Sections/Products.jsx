@@ -67,7 +67,7 @@ const Products = () => {
             key={item.id}
             className="productDiv flex justify-center items-center"
           >
-            <div className="product relative flex flex-col bg-slate-200 justify-start items-center h-[25em] w-[20em] rounded-sm">
+            <div className="product relative flex flex-col bg-slate-200 justify-start items-center md:h-[25em] h-[23em] w-[20em] rounded-sm">
               <img
                 src={item.img}
                 alt={item.title}
