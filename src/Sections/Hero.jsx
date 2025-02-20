@@ -91,8 +91,8 @@ const Hero = () => {
           // id="home"
           className="flex items-center justify-center w-screen h-[60vh] md:h-screen"
         >
-          <span
-            className="flex-start align-text-top gap-3 pl-6 md:pl-0 text-center"
+          <div
+            className="relative  flex flex-center align-text-top gap-3  md:pl-0 text-center  pl-5"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -104,11 +104,12 @@ const Hero = () => {
               ref={textRef}
               style={{
                 // overflow: "hidden",
+
                 display: "inline-block",
                 // whiteSpace: "nowrap",
                 color: "white",
               }}
-              className="relative left-3 md:left-0 font-poppins md:text-6xl text-4xl justify-around m-0 p-0 font-bold"
+              className="relative left-[-3vw] md:left-0 font-poppins md:text-6xl text-4xl justify-around m-0 p-0 font-bold"
             >
               Welcome to{" "}
               <span className="bg-custom-gradient1 bg-clip-text text-[#58a0df]">
@@ -132,7 +133,7 @@ const Hero = () => {
               </button>
               <button className="text-white">Learn more</button>
             </span>
-          </span>
+          </div>
         </div>
       </section>
     </>

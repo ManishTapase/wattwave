@@ -47,7 +47,7 @@ const LandingPage = () => {
 
   return (
     <div className={`landing-page ${fadeOut ? "fade-out" : ""}`}>
-      <img src={logo} alt="" className="landing-title" />
+      <img src={logo} alt="" className="landing-title h-auto" />
       <h1
         ref={paraRef}
         style={{ fontFamily: "CustomFont, sans-serif" }}
