@@ -1,32 +1,30 @@
 {
   "files": {
     "main.css": "/wattwave/static/css/main.e0d38ddb.css",
-    "main.js": "/wattwave/static/js/main.191e8843.js",
+    "main.js": "/wattwave/static/js/main.80117ac4.js",
     "static/js/606.08996d38.chunk.js": "/wattwave/static/js/606.08996d38.chunk.js",
     "static/css/597.7f530c8c.chunk.css": "/wattwave/static/css/597.7f530c8c.chunk.css",
-    "static/js/597.df010501.chunk.js": "/wattwave/static/js/597.df010501.chunk.js",
+    "static/js/597.4b5e6ddc.chunk.js": "/wattwave/static/js/597.4b5e6ddc.chunk.js",
     "static/js/685.68daba6f.chunk.js": "/wattwave/static/js/685.68daba6f.chunk.js",
-    "static/js/674.9db8d88e.chunk.js": "/wattwave/static/js/674.9db8d88e.chunk.js",
+    "static/js/35.6b20df08.chunk.js": "/wattwave/static/js/35.6b20df08.chunk.js",
     "static/js/990.ea0a0623.chunk.js": "/wattwave/static/js/990.ea0a0623.chunk.js",
     "static/js/300.497c2a56.chunk.js": "/wattwave/static/js/300.497c2a56.chunk.js",
     "static/js/893.ed323cbe.chunk.js": "/wattwave/static/js/893.ed323cbe.chunk.js",
     "static/css/366.c9c71c2f.chunk.css": "/wattwave/static/css/366.c9c71c2f.chunk.css",
     "static/js/366.23354ab9.chunk.js": "/wattwave/static/js/366.23354ab9.chunk.js",
-    "static/css/738.9b530cd6.chunk.css": "/wattwave/static/css/738.9b530cd6.chunk.css",
-    "static/js/738.ca208cc2.chunk.js": "/wattwave/static/js/738.ca208cc2.chunk.js",
+    "static/css/463.9b530cd6.chunk.css": "/wattwave/static/css/463.9b530cd6.chunk.css",
+    "static/js/463.fc073c0f.chunk.js": "/wattwave/static/js/463.fc073c0f.chunk.js",
     "static/js/275.cfa9cd5c.chunk.js": "/wattwave/static/js/275.cfa9cd5c.chunk.js",
     "static/js/131.0c71965a.chunk.js": "/wattwave/static/js/131.0c71965a.chunk.js",
     "static/js/903.48b499ab.chunk.js": "/wattwave/static/js/903.48b499ab.chunk.js",
     "static/js/959.c4408f5d.chunk.js": "/wattwave/static/js/959.c4408f5d.chunk.js",
-    "static/css/88.6018c1cc.chunk.css": "/wattwave/static/css/88.6018c1cc.chunk.css",
+    "static/css/88.ffe98f26.chunk.css": "/wattwave/static/css/88.ffe98f26.chunk.css",
     "static/media/videoW.mp4": "/wattwave/static/media/videoW.2130904396b2dd261db8.mp4",
     "static/media/wave3.png": "/wattwave/static/media/wave3.d47853da776ed35b18a9.png",
-    "static/media/wattPark.jpg": "/wattwave/static/media/wattPark.f6cc6bc90845cb793500.jpg",
     "static/media/logo.png": "/wattwave/static/media/logo.9280c271da26444a4d4e.png",
     "static/media/wattwaveGIF.gif": "/wattwave/static/media/wattwaveGIF.d2c139eb0ad1616af367.gif",
     "static/media/RoadCar.jpg": "/wattwave/static/media/RoadCar.f9129aa76f8ec5002ac6.jpg",
     "static/media/mainLogo.jpg": "/wattwave/static/media/mainLogo.7ac571acf057b7d0b462.jpg",
-    "static/media/aboutImg.webp": "/wattwave/static/media/aboutImg.5de4ad9e3bde5642ae86.webp",
     "static/media/Earth-Orbiter-Expanded.ttf.woff": "/wattwave/static/media/Earth-Orbiter-Expanded.ttf.b4f9ca509c05b4ba5771.woff",
     "static/media/wireless-charging.png": "/wattwave/static/media/wireless-charging.d95190ef7d2ce9cc816e.png",
     "static/media/vision.png": "/wattwave/static/media/vision.ed440ddefdf34ce283c0.png",
@@ -34,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.e0d38ddb.css",
-    "static/js/main.191e8843.js"
+    "static/js/main.80117ac4.js"
   ]
 }
