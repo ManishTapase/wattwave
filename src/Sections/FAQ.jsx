@@ -5,7 +5,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/faq.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Animation from "../Components/Animation";
-import wattPark from "../Assets/wattPark.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const FAQ = () => {
@@ -55,16 +54,6 @@ const FAQ = () => {
 
   return (
     <section className="w-screen h-[max-content] flex flex-col justify-center items-center p-5">
-      <div className="md:h-[70vh] h-[45vh] w-[90vw] mb-5">
-        <h6>wattwave park</h6>
-        <img
-          loading="lazy"
-          className="h-full w-full"
-          src={wattPark}
-          alt="wattpark"
-        />
-      </div>
-
       <div id="faq" className="flex flex-col w-[100vw] p-5 pt-10">
         <Animation heading={"FAQ"} />
         {datafile.questions.map((item) => {

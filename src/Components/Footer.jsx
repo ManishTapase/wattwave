@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../Assets/logo.png";
 import Arrow from "../Assets/arrow.png";
 import "../styles/footer.css";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import gsap from "gsap";
 
 const Footer = () => {
@@ -133,10 +133,22 @@ const Footer = () => {
             </ul>
             <div>
               <div className="flex flex-row gap-6 text-2xl absolute bottom-14 md:relative md:bottom-0 p-1 md:text-gray-700 text-white">
-                <FontAwesomeIcon icon="fa-brands fa-linkedin" />
-                <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
-                <FontAwesomeIcon icon="fa-brands fa-facebook" />
-                <FontAwesomeIcon icon="fa-brands fa-instagram" />
+                <Link
+                  to="https://www.linkedin.com/company/watt-wave"
+                  className="pointer"
+                >
+                  <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+                </Link>
+
+                <Link to="#" className="pointer">
+                  <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
+                </Link>
+                <Link to="#" className="pointer">
+                  <FontAwesomeIcon icon="fa-brands fa-facebook" />
+                </Link>
+                <Link to="#" className="pointer">
+                  <FontAwesomeIcon icon="fa-brands fa-instagram" />
+                </Link>
               </div>
             </div>
           </nav>
