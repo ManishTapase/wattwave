@@ -19,15 +19,14 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong. Please try again later.</div>;
-    } else {
-      return this.props.children;
     }
+    return this.props.children;
   }
 }
 
 const App = () => {
   return (
-    <Router basename="/wattwave">
+    <Router>
       <ErrorBoundary>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
