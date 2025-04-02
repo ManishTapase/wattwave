@@ -4,33 +4,33 @@
       "id": 1,
       "title": "Efficiency",
       "description": "Our wireless charging solutions are designed to maximize efficiency, ensuring that your EV spends more time on the road and less time tethered to a charging station.",
-      "img": "/wattwave/Assetss/car2.jpeg",
-      "iconW": "/wattwave/Assetss/efficiency_w.png",
-      "iconB": "/wattwave/Assetss/efficiency_b.png"
+      "img": "/Assetss/car2.jpeg",
+      "iconW": "/Assetss/efficiency_w.png",
+      "iconB": "/Assetss/efficiency_b.png"
     },
     {
       "id": 2,
       "title": "Convenience",
       "description": "Say goodbye to the hassle of plugging and unplugging your vehicle. With Watt Wave, charging your EV is as simple as parking it over our charging pad.",
-      "img": "/wattwave/Assetss/BMW-Wire.jpg",
-      "iconW": "/wattwave/Assetss/convenience_w.png",
-      "iconB": "/wattwave/Assetss/convenience_b.png"
+      "img": "/Assetss/BMW-Wire.jpg",
+      "iconW": "/Assetss/convenience_w.png",
+      "iconB": "/Assetss/convenience_b.png"
     },
     {
       "id": 3,
       "title": "Versatility",
       "description": "Whether you're at home, at work, or on the go, our wireless chargers are designed to seamlessly integrate into your lifestyle, providing reliable power wherever you need it.",
-      "img": "/wattwave/Assetss/car-1.webp",
-      "iconW": "/wattwave/Assetss/versality_w.png",
-      "iconB": "/wattwave/Assetss/versality_b.png"
+      "img": "/Assetss/car-1.webp",
+      "iconW": "/Assetss/versality_w.png",
+      "iconB": "/Assetss/versality_b.png"
     },
     {
       "id": 4,
       "title": "Sustainability",
       "description": "By eliminating the need for traditional charging cables, Watt Wave is helping to reduce waste and minimize environmental impact, one charge at a time.",
-      "img": "/wattwave/Assetss/parkCarEvPad.png",
-      "iconW": "/wattwave/Assetss/sustainability_w.png",
-      "iconB": "/wattwave/Assetss/sustainability_b.png"
+      "img": "/Assetss/parkCarEvPad.png",
+      "iconW": "/Assetss/sustainability_w.png",
+      "iconB": "/Assetss/sustainability_b.png"
     }
   ],
   "products": [
@@ -38,19 +38,19 @@
       "id": 1,
       "title": "Home Charging Solutions",
       "description": "Transform your garage into a personal charging station with our sleek and efficient home charging pads.",
-      "img": "/wattwave/Assetss/car-1.webp"
+      "img": "/Assetss/car-1.webp"
     },
     {
       "id": 2,
       "title": "Public Charging Stations",
       "description": "From parking lots to city streets, our public charging stations provide convenient access to power for EV drivers",
-      "img": "/wattwave/Assetss/station.jpg"
+      "img": "/Assetss/station.jpg"
     },
     {
       "id": 3,
       "title": "Commercial Solutions",
       "description": "Streamline your fleet management operations with our customizable charging solutions for businesses and municipalities.",
-      "img": "/wattwave/Assetss/truck.webp"
+      "img": "/Assetss/truck.webp"
     }
   ],
   "benifits": [
@@ -58,19 +58,19 @@
       "id": 1,
       "title": "Safety",
       "description": "Our wireless charging technology eliminates the risk of electric shock and reduces wear and tear on charging connectors, ensuring a safer charging experience for both you and your vehicle.",
-      "img": "/wattwave/Assetss/car-check.png"
+      "img": "/Assetss/car-check.png"
     },
     {
       "id": 2,
       "title": "Reliability",
       "description": "With no physical connectors to degrade or malfunction, our wireless chargers provide a reliable and consistent charging experience, every time.",
-      "img": "/wattwave/Assetss/warranty.png"
+      "img": "/Assetss/warranty.png"
     },
     {
       "id": 3,
       "title": "Future-Proof",
       "description": "As the automotive industry continues to evolve, our wireless charging solutions are designed to adapt and grow with the latest advancements in electric vehicle technology.",
-      "img": "/wattwave/Assetss/future.png"
+      "img": "/Assetss/future.png"
     }
   ],
   "questions": [
@@ -118,37 +118,37 @@
   "supportedBy": [
     {
       "id": 1,
-      "img": "/wattwave/Assetss/s1.jpg",
+      "img": "/Assetss/s1.jpg",
       "link": ""
     },
     {
       "id": 2,
-      "img": "/wattwave/Assetss/s2.jpg",
+      "img": "/Assetss/s2.jpg",
       "link": ""
     },
     {
       "id": 3,
-      "img": "/wattwave/Assetss/s3.jpg",
+      "img": "/Assetss/s3.jpg",
       "link": ""
     },
     {
       "id": 4,
-      "img": "/wattwave/Assetss/s4.jpg",
+      "img": "/Assetss/s4.jpg",
       "link": ""
     },
     {
       "id": 5,
-      "img": "/wattwave/Assetss/s5.jpg",
+      "img": "/Assetss/s5.jpg",
       "link": ""
     },
     {
       "id": 6,
-      "img": "/wattwave/Assetss/s6.jpg",
+      "img": "/Assetss/s6.jpg",
       "link": ""
     },
     {
       "id": 7,
-      "img": "/wattwave/Assetss/s7.jpg",
+      "img": "/Assetss/s7.jpg",
       "link": ""
     }
   ]
