@@ -53,8 +53,11 @@ const FAQ = () => {
   };
 
   return (
-    <section className="w-screen h-[max-content] flex flex-col justify-center items-center p-5">
-      <div id="faq" className="flex flex-col w-[100vw] p-5 pt-10">
+    <section
+      id="faq"
+      className="w-screen h-[max-content] flex flex-col justify-center items-center pt-20 p-5"
+    >
+      <div className="flex flex-col w-[100vw] p-5 pt-10">
         <Animation heading={"FAQ"} />
         {datafile.questions.map((item) => {
           const isOpen = openQuestions.has(item.id);

@@ -37,7 +37,6 @@ const LazyLoadSection = ({ children, threshold = 0.1 }) => {
     <section
       ref={sectionRef}
       style={{
-        minHeight: "10vh" /* default height */,
         opacity: isVisible ? 1 : 0,
         transition: "opacity 2s ease-in-out",
       }}

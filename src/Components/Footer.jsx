@@ -132,7 +132,7 @@ const Footer = () => {
               </li> */}
             </ul>
             <div>
-              <div className="flex flex-row gap-6 text-2xl absolute bottom-14 md:relative md:bottom-0 p-1 md:text-gray-700 text-white">
+              <div className="flex flex-row gap-6 text-2xl absolute bottom-14 md:left-0 left-[30vw] md:relative md:bottom-0 p-1 md:text-gray-700 text-white">
                 <Link
                   to="https://www.linkedin.com/company/watt-wave"
                   className="pointer"

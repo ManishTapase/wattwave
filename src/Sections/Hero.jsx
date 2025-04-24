@@ -7,7 +7,6 @@ import { useNavigate } from "react-router";
 const Hero = () => {
   const textRef = useRef(null);
   const paraRef = useRef(null);
-  // const lineRef = useRef(null);
 
   const navigate = useNavigate();
 
@@ -53,12 +52,35 @@ const Hero = () => {
       }
     );
 
-    gsap.from(pChars, {
-      opacity: 0.3,
-      duration: 0.5,
-      ease: "back.in",
-      stagger: 0.1,
-    });
+    // gsap.from(pChars, {
+    //   opacity: 0.3,
+    //   duration: 0.5,
+    //   ease: "back.inOut",
+    //   stagger: 0.1,
+    // });
+
+    gsap.fromTo(
+      pChars,
+      {
+        scale: 2, // Start larger
+        opacity: 0, // Initial opacity
+        color: "#0a8bfdf5", // Start with green color
+      },
+      {
+        // scrollTrigger: {
+        //   trigger: animatedText, // Trigger animation on this element
+        //   start: "top 80%", // Start when the section is 80% in view
+        //   end: "top 30%", // End when it reaches 30% of the viewport
+        //   scrub: true, // Smoothly animate with scroll
+        // },
+        scale: 1, // Shrink to normal size
+        opacity: 1, // Keep fully visible
+        color: "#fff", // Change to white
+        stagger: 0.1, // Animate each letter one by one
+        ease: "power2.out", // Smooth easing
+        duration: 1.5, // Total duration of animation
+      }
+    );
   }, []);
   const splitText = (text) => {
     return text.split("").map((char, index) => (
@@ -141,3 +163,58 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// Function Code:
+//     ---------------
+//     // Split text into spans for individual letter animation and preserve spaces
+//         animatedText.innerHTML = animatedText.textContent
+//           .split("")
+//           .map((char) =>
+//             char === " " ? `<span class="d-inline-flex">&nbsp;</span>` : `<span class="d-inline-flex">${char}</span>`
+//           )
+//           .join("");
+
+//         // Select all spans for animation
+//         const letters = animatedText.querySelectorAll("span");
+
+// Set initial styles for the letters
+// gsap.set(letters, {
+//   scale: 5, // Set an initial large scale
+//   opacity: 1, // Ensure letters are visible initially
+//   color: "#00e239", // Set initial color
+// });
+
+// Apply GSAP animation
+// gsap.fromTo(
+//   letters,
+//   {
+//     scale: 2, // Start larger
+//     opacity: 0, // Initial opacity
+//     color: "#00e239", // Start with green color
+//   },
+//   {
+//     scrollTrigger: {
+//       trigger: animatedText, // Trigger animation on this element
+//       start: "top 80%", // Start when the section is 80% in view
+//       end: "top 30%", // End when it reaches 30% of the viewport
+//       scrub: true, // Smoothly animate with scroll
+//     },
+//     scale: 1, // Shrink to normal size
+//     opacity: 1, // Keep fully visible
+//     color: "#fff", // Change to white
+//     stagger: 0.1, // Animate each letter one by one
+//     ease: "power2.out", // Smooth easing
+//     duration: 1.5, // Total duration of animation
+//   }
+// );
+
+// HTML Code:
+// ---------------
+// <section class="container-fluid vh-100 d-flex align-items-center justify-content-center position-relative effect-section" data-effect="scale-shrink-color" data-cur="cursor">
+//       <button class="btn btn-light position-absolute top-0 end-0 m-3 copy-btn" data-cur="pointer">Copy Code</button>
+//       <div class="row w-100">
+//         <div class="col-12 text-center">
+//           <h1 class="animated-text" data-cur="cursor"><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">S</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">c</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">a</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">l</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">i</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">n</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">g</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">&nbsp;</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">G</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">r</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">a</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">d</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">i</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">e</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">n</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">t</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">&nbsp;</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">T</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">e</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">x</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">t</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">&nbsp;</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">A</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">n</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">i</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">m</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">a</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">t</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">i</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">o</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);" data-cur="cursor">n</span><span class="d-inline-flex" style="translate: none; rotate: none; scale: none; color: rgb(0, 226, 57); opacity: 0; transform: scale(2, 2);">!</span></h1>
+//         </div>
+//       </div>
+//     </section>

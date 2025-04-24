@@ -28,7 +28,7 @@ const App = () => {
   return (
     <Router>
       <ErrorBoundary>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div></div>}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<Main />} />
